@@ -102,6 +102,18 @@
             }
         }
 
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #6c5ce7;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
+        }
+
         .hero h1 {
             font-size: 4.5em;
             font-weight: 800;
@@ -328,6 +340,10 @@
                 font-size: 0.85rem;
                 padding: 2px 6px;
             }
+            .hero-logo {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 </head>
@@ -347,6 +363,7 @@
 
     <section class="hero">
         <div class="container">
+            <img src="maxstudio.jpg" alt="MaxStudio Logo" class="hero-logo" />
             <h1>MaxStudio</h1>
             <p class="subtitle" data-i18n="hero_sub">Innovación, Arte Digital, Ciberseguridad y Conocimiento</p>
             <p class="tagline" data-i18n="hero_tag">🚀 Hecho 100% a mano · Desde 2022</p>
@@ -526,7 +543,7 @@
         <div class="card-grid">
             <!-- Libro 1: Trading Crypto desde Cero -->
             <div class="card">
-                <div style="font-size: 4rem; margin-bottom: 10px;">📈</div>
+                <img src="trading.png" alt="Trading Crypto desde Cero" />
                 <h3>Trading Crypto desde Cero</h3>
                 <p data-i18n="book1_desc">Historia, psicología y tácticas de los mejores traders del mundo. Aprende desde los fundamentos hasta estrategias avanzadas.</p>
                 <a href="https://play.google.com/store/books/details?id=1bTTEQAAQBAJ" target="_blank" data-i18n="btn_buy">Comprar en Google Play Books →</a>
@@ -534,7 +551,7 @@
 
             <!-- Libro 2: El Código del Éxito -->
             <div class="card">
-                <div style="font-size: 4rem; margin-bottom: 10px;">🏆</div>
+                <img src="el_codigo.png" alt="El Código del Éxito" />
                 <h3>El Código del Éxito</h3>
                 <p data-i18n="book2_desc">Los 10 Mandamientos para Crear Riqueza desde Cero. Principios, hábitos y mentalidad para construir riqueza desde cero.</p>
                 <a href="https://play.google.com/store/books/details/Maximo_Vargas_El_C%C3%B3digo_del_%C3%89xito_Los_10_Mandamien?id=vUfTEQAAQBAJ" target="_blank" data-i18n="btn_buy">Comprar en Google Play Books →</a>
@@ -542,7 +559,7 @@
 
             <!-- Libro 3: Historia del NFT -->
             <div class="card">
-                <div style="font-size: 4rem; margin-bottom: 10px;">🎭</div>
+                <img src="NFT.png" alt="Historia del NFT: Del Cielo al Fin" />
                 <h3>Historia del NFT: Del Cielo al Fin</h3>
                 <p data-i18n="book3_desc">El nacimiento, la burbuja y la caída de los activos digitales que prometieron cambiar internet. Un viaje completo.</p>
                 <a href="https://play.google.com/store/books/details?id=JrbTEQAAQBAJ" target="_blank" data-i18n="btn_buy">Comprar en Google Play Books →</a>
@@ -837,7 +854,6 @@
         const i18nElements = document.querySelectorAll('[data-i18n]');
 
         function setLanguage(lang) {
-            // Update active class
             allLangSpans.forEach(span => {
                 span.classList.remove('active');
                 if (span.dataset.lang === lang) {
@@ -845,7 +861,6 @@
                 }
             });
 
-            // Update all translatable elements
             i18nElements.forEach(el => {
                 const key = el.dataset.i18n;
                 if (translations[lang] && translations[lang][key] !== undefined) {
@@ -853,11 +868,9 @@
                 }
             });
 
-            // Update html lang attribute
             document.documentElement.lang = lang;
         }
 
-        // Event listeners for language switcher
         allLangSpans.forEach(span => {
             span.addEventListener('click', function(e) {
                 const lang = this.dataset.lang;
@@ -865,7 +878,6 @@
             });
         });
 
-        // Default language: Spanish
         setLanguage('es');
     </script>
 

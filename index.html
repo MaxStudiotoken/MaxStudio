@@ -128,12 +128,27 @@
             border: 1px solid #2a2a40;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         
         .card:hover {
             transform: translateY(-8px);
             border-color: #6c5ce7;
             box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
+        }
+        
+        .card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            background: #1a1a2a;
+            padding: 8px;
+            border: 1px solid #2a2a40;
         }
         
         .card h3 {
@@ -203,6 +218,17 @@
             color: #b0b0d0;
         }
         
+        .wallet-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 24px;
+            background: #1a1a2a;
+            padding: 12px;
+            border: 2px solid #6c5ce7;
+            margin-bottom: 20px;
+        }
+        
         .list-links {
             list-style: none;
             padding: 0;
@@ -244,6 +270,8 @@
             .hero h1 { font-size: 2.8em; }
             .hero .subtitle { font-size: 1.2em; }
             .section-title { font-size: 2em; }
+            .card img { width: 60px; height: 60px; }
+            .wallet-logo { width: 80px; height: 80px; }
         }
     </style>
 </head>
@@ -326,17 +354,23 @@
         <p style="text-align:center; color:#8888aa; margin-bottom:30px;">Tras el hackeo, MaxStudio creó herramientas para proteger a los usuarios.</p>
 
         <div class="card-grid">
+            <!-- SecureMap -->
             <div class="card">
+                <img src="securemap.png" alt="SecureMap - Analizador de red WiFi">
                 <h3>📶 SecureMap</h3>
                 <p>Analiza tu red WiFi y detecta intrusos. Escanea tu red de datos para echar a quienes se cuelan en tu conexión.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.securemap" target="_blank">Descargar en Google Play →</a>
             </div>
+            <!-- Malviora -->
             <div class="card">
+                <img src="malviaraantivirus.png" alt="Malviora - Antivirus gratuito">
                 <h3>🦠 Malviora</h3>
                 <p>Antivirus gratuito que escanea tu dispositivo en busca de malware. La seguridad debería ser gratuita para todos.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.malviora" target="_blank">Descargar en Google Play →</a>
             </div>
+            <!-- VPNFree -->
             <div class="card">
+                <img src="vpnfree.png" alt="VPNFree - VPN anónima y segura">
                 <h3>🔒 VPNFree</h3>
                 <p>Navega por la web de forma anónima y segura. Sin dejar rastro y con total privacidad.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.vpnfree" target="_blank">Descargar en Google Play →</a>
@@ -351,6 +385,7 @@
             </div>
             
             <div style="background: linear-gradient(145deg, #1a1a30, #111122); padding: 40px; border-radius: 30px; border: 2px solid #6c5ce7; text-align: center;">
+                <img src="bank20solana.png" alt="WalletBank20 - Logo" class="wallet-logo">
                 <h2 style="color: #ffffff; font-size: 2.5em; margin-bottom: 15px;">💎 WalletBank20</h2>
                 <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; color: #c0c0d0;">
                     La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>. 

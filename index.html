@@ -33,9 +33,46 @@
             padding: 20px;
         }
 
+        /* Language Switcher */
+        .lang-switcher {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 18, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #2a2a40;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+        }
+        .lang-switcher span {
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 4px 10px;
+            border-radius: 30px;
+            transition: 0.3s;
+            color: #8888aa;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .lang-switcher span:hover {
+            background: rgba(108, 92, 231, 0.2);
+            color: #ffffff;
+        }
+        .lang-switcher span.active {
+            background: #6c5ce7;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(108, 92, 231, 0.4);
+        }
+        .lang-switcher .flag {
+            margin-right: 4px;
+        }
+
         .hero {
             background: linear-gradient(135deg, #0f0f1f 0%, #1a1a3a 50%, #0d0d1a 100%);
-            padding: 80px 20px;
+            padding: 60px 20px 80px 20px;
             text-align: center;
             border-bottom: 2px solid #6c5ce7;
             position: relative;
@@ -287,16 +324,32 @@
                 width: 80px;
                 height: 80px;
             }
+            .lang-switcher span {
+                font-size: 0.85rem;
+                padding: 2px 6px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- LANGUAGE SWITCHER -->
+    <div class="lang-switcher" id="languageSwitcher">
+        <span data-lang="es" class="active"><span class="flag">🇪🇸</span> ES</span>
+        <span data-lang="en"><span class="flag">🇬🇧</span> EN</span>
+        <span data-lang="fr"><span class="flag">🇫🇷</span> FR</span>
+        <span data-lang="it"><span class="flag">🇮🇹</span> IT</span>
+        <span data-lang="zh"><span class="flag">🇨🇳</span> 中文</span>
+        <span data-lang="ru"><span class="flag">🇷🇺</span> RU</span>
+        <span data-lang="de"><span class="flag">🇩🇪</span> DE</span>
+        <span data-lang="pt"><span class="flag">🇧🇷</span> PT</span>
+    </div>
+
     <section class="hero">
         <div class="container">
             <h1>MaxStudio</h1>
-            <p class="subtitle">Innovación, Arte Digital, Ciberseguridad y Conocimiento</p>
-            <p class="tagline">🚀 Hecho 100% a mano · Desde 2022</p>
+            <p class="subtitle" data-i18n="hero_sub">Innovación, Arte Digital, Ciberseguridad y Conocimiento</p>
+            <p class="tagline" data-i18n="hero_tag">🚀 Hecho 100% a mano · Desde 2022</p>
         </div>
     </section>
 
@@ -304,17 +357,17 @@
 
         <!-- INTRODUCCIÓN: ¿QUÉ ES MAXSTUDIO? -->
         <div class="section-title-wrap">
-            <h2 class="section-title">¿Qué es <span style="color:#6c5ce7;">MaxStudio</span>?</h2>
+            <h2 class="section-title" data-i18n="section_what">¿Qué es <span style="color:#6c5ce7;">MaxStudio</span>?</h2>
         </div>
 
         <div style="background: #0f0f1a; padding: 30px; border-radius: 20px; border: 1px solid #2a2a40; margin-bottom: 40px;">
-            <p style="font-size: 1.2rem; line-height: 1.8;">
+            <p style="font-size: 1.2rem; line-height: 1.8;" data-i18n="intro_p1">
                 <span class="highlight-green">MaxStudio</span> comenzó su andadura en <strong>2022</strong> con la creación de la colección
                 <strong>Zip World NFT</strong> en <strong>Binance</strong>. 
                 <span class="highlight-pink">La colección Zip World NFT fue creada 100% a mano, sin inteligencia artificial.</span>
                 Cada capítulo de sus cortos animados tiene un significado especial y un mensaje motivacional para mejorar aspectos de la vida.
             </p>
-            <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 15px;">
+            <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 15px;" data-i18n="intro_p2">
                 Ante las restricciones de Binance para creadores de NFTs, la comunidad migró a <strong>OpenSea</strong>,
                 donde MaxStudio expandió su universo artístico con múltiples colecciones. Pero la evolución no se detuvo ahí:
                 <span class="highlight-green">MaxStudio</span> sufrió un hackeo de criptomonedas que cambió su rumbo para siempre.
@@ -325,7 +378,7 @@
 
         <!-- SECCIÓN: ARTE Y NFTS -->
         <div class="section-title-wrap">
-            <h2 class="section-title">🎨 Colecciones NFT (Arte sin IA)</h2>
+            <h2 class="section-title" data-i18n="section_nft">🎨 Colecciones NFT (Arte sin IA)</h2>
         </div>
 
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 40px;">
@@ -346,55 +399,55 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 50px;">
             <div class="card">
                 <h3>🪙 Crypto Gods</h3>
-                <a href="https://opensea.io/collection/crypto-gods-collection-1" target="_blank">Explorar colección →</a>
+                <a href="https://opensea.io/collection/crypto-gods-collection-1" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
             <div class="card">
                 <h3>🤖 CyberGuardians</h3>
-                <a href="https://opensea.io/collection/cyberguardians" target="_blank">Explorar colección →</a>
+                <a href="https://opensea.io/collection/cyberguardians" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
             <div class="card">
                 <h3>📜 History Crypto</h3>
-                <a href="https://opensea.io/collection/history-crypto-currency-collection" target="_blank">Explorar colección →</a>
+                <a href="https://opensea.io/collection/history-crypto-currency-collection" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
             <div class="card">
                 <h3>⚔️ WWI Vehicles</h3>
-                <a href="https://opensea.io/collection/world-war-i-military-vehicles" target="_blank">Explorar colección →</a>
+                <a href="https://opensea.io/collection/world-war-i-military-vehicles" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
         </div>
 
         <!-- SECCIÓN: APLICACIONES DE SEGURIDAD -->
         <div class="section-title-wrap">
-            <h2 class="section-title">🛡️ Apps de Ciberseguridad (Gratuitas)</h2>
+            <h2 class="section-title" data-i18n="section_cyber">🛡️ Apps de Ciberseguridad (Gratuitas)</h2>
         </div>
-        <p style="text-align:center; color:#8888aa; margin-bottom:30px;">Tras el hackeo, MaxStudio creó herramientas para proteger a los usuarios.</p>
+        <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="cyber_desc">Tras el hackeo, MaxStudio creó herramientas para proteger a los usuarios.</p>
 
         <div class="card-grid">
             <!-- SecureMap -->
             <div class="card">
                 <img src="securemap.png" alt="SecureMap - Analizador de red WiFi" />
                 <h3>📶 SecureMap</h3>
-                <p>Analiza tu red WiFi y detecta intrusos. Escanea tu red de datos para echar a quienes se cuelan en tu conexión.</p>
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.securemap" target="_blank">Descargar en Google Play →</a>
+                <p data-i18n="securemap_desc">Analiza tu red WiFi y detecta intrusos. Escanea tu red de datos para echar a quienes se cuelan en tu conexión.</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.securemap" target="_blank" data-i18n="btn_download">Descargar en Google Play →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/cybersecurity-securemap/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/cybersecurity-securemap/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
             <!-- Malviora -->
             <div class="card">
                 <img src="malviaraantivirus.png" alt="Malviora - Antivirus gratuito" />
                 <h3>🦠 Malviora</h3>
-                <p>Antivirus gratuito que escanea tu dispositivo en busca de malware. La seguridad debería ser gratuita para todos.</p>
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.malviora" target="_blank">Descargar en Google Play →</a>
+                <p data-i18n="malviora_desc">Antivirus gratuito que escanea tu dispositivo en busca de malware. La seguridad debería ser gratuita para todos.</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.malviora" target="_blank" data-i18n="btn_download">Descargar en Google Play →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/malviora-antivirus/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/malviora-antivirus/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
             <!-- VPNFree -->
             <div class="card">
                 <img src="vpnfree.png" alt="VPNFree - VPN anónima y segura" />
                 <h3>🔒 VPNFree</h3>
-                <p>Navega por la web de forma anónima y segura. Sin dejar rastro y con total privacidad.</p>
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.vpnfree" target="_blank">Descargar en Google Play →</a>
+                <p data-i18n="vpnfree_desc">Navega por la web de forma anónima y segura. Sin dejar rastro y con total privacidad.</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.vpnfree" target="_blank" data-i18n="btn_download">Descargar en Google Play →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/vpnfree/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/vpnfree/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
         </div>
 
@@ -402,13 +455,13 @@
         <div style="margin-top: 50px;">
             <div class="stats-box">
                 <span class="number">8.000+</span>
-                <span class="label">Descargas en Google Play</span>
+                <span class="label" data-i18n="stats_label">Descargas en Google Play</span>
             </div>
 
             <div style="background: linear-gradient(145deg, #1a1a30, #111122); padding: 40px; border-radius: 30px; border: 2px solid #6c5ce7; text-align: center;">
                 <img src="bank20solana.png" alt="WalletBank20 - Logo" class="wallet-logo" />
                 <h2 style="color: #ffffff; font-size: 2.5em; margin-bottom: 15px;">💎 WalletBank20</h2>
-                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; color: #c0c0d0;">
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; color: #c0c0d0;" data-i18n="wallet_desc">
                     La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>.
                     Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro.
                     <strong>Juega online con tus amigos, totalmente gratis</strong>, y olvídate de los hackers.
@@ -420,7 +473,7 @@
                     <span class="badge" style="background:#ffd700; color:#000;">💰 Token Propio</span>
                 </div>
                 <br />
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.walletbank20" target="_blank" style="display: inline-block; background: #6c5ce7; color: white; padding: 15px 40px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.2rem; margin-top: 20px; transition: 0.3s; border: 1px solid #8a7cec;">
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.walletbank20" target="_blank" style="display: inline-block; background: #6c5ce7; color: white; padding: 15px 40px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.2rem; margin-top: 20px; transition: 0.3s; border: 1px solid #8a7cec;" data-i18n="btn_download">
                     📲 Descargar WalletBank20
                 </a>
             </div>
@@ -428,77 +481,77 @@
 
         <!-- NUEVA SECCIÓN: OTRAS APPS (SCANNERS Y MENSAJES NEON) -->
         <div class="section-title-wrap">
-            <h2 class="section-title">📱 Otras Apps de MaxStudio</h2>
+            <h2 class="section-title" data-i18n="section_other">📱 Otras Apps de MaxStudio</h2>
         </div>
-        <p style="text-align:center; color:#8888aa; margin-bottom:30px;">Herramientas divertidas y útiles para el día a día.</p>
+        <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="other_desc">Herramientas divertidas y útiles para el día a día.</p>
 
         <div class="card-grid">
             <!-- Hot Wheels Scanner -->
             <div class="card">
                 <img src="hotwheels.png" alt="Hot Wheels Scanner" />
                 <h3>🏎️ Hot Wheels Scanner</h3>
-                <p>Escanea tus coches Hot Wheels y descubre información, rarezas y mucho más. ¡La colección cobra vida!</p>
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.hotwheelsscanner" target="_blank">Descargar en Google Play →</a>
+                <p data-i18n="hotwheels_desc">Escanea tus coches Hot Wheels y descubre información, rarezas y mucho más. ¡La colección cobra vida!</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.hotwheelsscanner" target="_blank" data-i18n="btn_download">Descargar en Google Play →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/hotwheels-scanner/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/hotwheels-scanner/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
 
             <!-- Pokémon Scanner -->
             <div class="card">
                 <img src="pokemon.png" alt="Pokémon Card Scanner" />
                 <h3>⚡ Pokémon Scanner</h3>
-                <p>Escanea tus cartas Pokémon y obtén información, valores y datos de cada carta. ¡Atrapa todas!</p>
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.pokemoncardscanner" target="_blank">Descargar en Google Play →</a>
+                <p data-i18n="pokemon_desc">Escanea tus cartas Pokémon y obtén información, valores y datos de cada carta. ¡Atrapa todas!</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.pokemoncardscanner" target="_blank" data-i18n="btn_download">Descargar en Google Play →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/pokemon-card-scanner-2026/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/pokemon-card-scanner-2026/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
 
             <!-- Neon Messages -->
             <div class="card">
                 <img src="neon.png" alt="Neon Messages - Mensajes de fiesta" />
                 <h3>💡 Neon Messages</h3>
-                <p>Crea mensajes con letras de neón para fiestas, eventos y celebraciones. ¡Dale color a tus momentos especiales!</p>
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.neonmessages" target="_blank">Descargar en Google Play →</a>
+                <p data-i18n="neon_desc">Crea mensajes con letras de neón para fiestas, eventos y celebraciones. ¡Dale color a tus momentos especiales!</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.neonmessages" target="_blank" data-i18n="btn_download">Descargar en Google Play →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/neon-messages-party/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/neon-messages-party/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
         </div>
 
         <!-- NUEVA SECCIÓN: LIBROS PUBLICADOS -->
         <div class="section-title-wrap">
-            <h2 class="section-title">📚 Libros de MaxStudio</h2>
+            <h2 class="section-title" data-i18n="section_books">📚 Libros de MaxStudio</h2>
         </div>
-        <p style="text-align:center; color:#8888aa; margin-bottom:30px;">Conocimiento para el éxito financiero, trading e historia de los NFT.</p>
+        <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="books_desc">Conocimiento para el éxito financiero, trading e historia de los NFT.</p>
 
         <div class="card-grid">
             <!-- Libro 1: Trading Crypto desde Cero -->
             <div class="card">
                 <div style="font-size: 4rem; margin-bottom: 10px;">📈</div>
                 <h3>Trading Crypto desde Cero</h3>
-                <p>Historia, psicología y tácticas de los mejores traders del mundo. Aprende desde los fundamentos hasta estrategias avanzadas.</p>
-                <a href="https://play.google.com/store/books/details?id=1bTTEQAAQBAJ" target="_blank">Comprar en Google Play Books →</a>
+                <p data-i18n="book1_desc">Historia, psicología y tácticas de los mejores traders del mundo. Aprende desde los fundamentos hasta estrategias avanzadas.</p>
+                <a href="https://play.google.com/store/books/details?id=1bTTEQAAQBAJ" target="_blank" data-i18n="btn_buy">Comprar en Google Play Books →</a>
             </div>
 
             <!-- Libro 2: El Código del Éxito -->
             <div class="card">
                 <div style="font-size: 4rem; margin-bottom: 10px;">🏆</div>
                 <h3>El Código del Éxito</h3>
-                <p>Los 10 Mandamientos para Crear Riqueza desde Cero. Principios, hábitos y mentalidad para construir riqueza desde cero.</p>
-                <a href="https://play.google.com/store/books/details/Maximo_Vargas_El_C%C3%B3digo_del_%C3%89xito_Los_10_Mandamien?id=vUfTEQAAQBAJ" target="_blank">Comprar en Google Play Books →</a>
+                <p data-i18n="book2_desc">Los 10 Mandamientos para Crear Riqueza desde Cero. Principios, hábitos y mentalidad para construir riqueza desde cero.</p>
+                <a href="https://play.google.com/store/books/details/Maximo_Vargas_El_C%C3%B3digo_del_%C3%89xito_Los_10_Mandamien?id=vUfTEQAAQBAJ" target="_blank" data-i18n="btn_buy">Comprar en Google Play Books →</a>
             </div>
 
             <!-- Libro 3: Historia del NFT -->
             <div class="card">
                 <div style="font-size: 4rem; margin-bottom: 10px;">🎭</div>
                 <h3>Historia del NFT: Del Cielo al Fin</h3>
-                <p>El nacimiento, la burbuja y la caída de los activos digitales que prometieron cambiar internet. Un viaje completo.</p>
-                <a href="https://play.google.com/store/books/details?id=JrbTEQAAQBAJ" target="_blank">Comprar en Google Play Books →</a>
+                <p data-i18n="book3_desc">El nacimiento, la burbuja y la caída de los activos digitales que prometieron cambiar internet. Un viaje completo.</p>
+                <a href="https://play.google.com/store/books/details?id=JrbTEQAAQBAJ" target="_blank" data-i18n="btn_buy">Comprar en Google Play Books →</a>
             </div>
         </div>
 
         <!-- RESUMEN FINAL / CITA -->
         <div style="margin-top: 60px; padding: 30px; background: #0f0f1a; border-radius: 20px; border-left: 5px solid #6c5ce7;">
-            <p style="font-size: 1.3rem; font-style: italic; color: #d0d0e0;">
+            <p style="font-size: 1.3rem; font-style: italic; color: #d0d0e0;" data-i18n="quote_text">
                 "En MaxStudio, cada trazo, cada línea de código y cada página escrita nacen del esfuerzo humano.
                 Creatividad, protección y conocimiento para nuestra comunidad."
             </p>
@@ -509,8 +562,8 @@
 
     <footer>
         <div class="container">
-            <p>© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Todos los derechos reservados.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">
+            <p data-i18n="footer_copy">© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;" data-i18n="footer_hand">
                 Hecho a mano con ❤️ · Seguridad, arte y conocimiento para el mundo digital.
             </p>
             <p style="margin-top: 10px;">
@@ -518,6 +571,303 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const translations = {
+            es: {
+                hero_sub: "Innovación, Arte Digital, Ciberseguridad y Conocimiento",
+                hero_tag: "🚀 Hecho 100% a mano · Desde 2022",
+                section_what: '¿Qué es <span style="color:#6c5ce7;">MaxStudio</span>?',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> comenzó su andadura en <strong>2022</strong> con la creación de la colección <strong>Zip World NFT</strong> en <strong>Binance</strong>. <span class="highlight-pink">La colección Zip World NFT fue creada 100% a mano, sin inteligencia artificial.</span> Cada capítulo de sus cortos animados tiene un significado especial y un mensaje motivacional para mejorar aspectos de la vida.`,
+                intro_p2: `Ante las restricciones de Binance para creadores de NFTs, la comunidad migró a <strong>OpenSea</strong>, donde MaxStudio expandió su universo artístico con múltiples colecciones. Pero la evolución no se detuvo ahí: <span class="highlight-green">MaxStudio</span> sufrió un hackeo de criptomonedas que cambió su rumbo para siempre. Ese incidente lo llevó a estudiar ciberseguridad, phishing y vulnerabilidades de red para proteger a los demás. Hoy también comparte su conocimiento a través de libros sobre trading, éxito financiero y la historia de los NFT.`,
+                section_nft: "🎨 Colecciones NFT (Arte sin IA)",
+                section_cyber: "🛡️ Apps de Ciberseguridad (Gratuitas)",
+                cyber_desc: "Tras el hackeo, MaxStudio creó herramientas para proteger a los usuarios.",
+                securemap_desc: "Analiza tu red WiFi y detecta intrusos. Escanea tu red de datos para echar a quienes se cuelan en tu conexión.",
+                malviora_desc: "Antivirus gratuito que escanea tu dispositivo en busca de malware. La seguridad debería ser gratuita para todos.",
+                vpnfree_desc: "Navega por la web de forma anónima y segura. Sin dejar rastro y con total privacidad.",
+                wallet_desc: `La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro. <strong>Juega online con tus amigos, totalmente gratis</strong>, y olvídate de los hackers.`,
+                stats_label: "Descargas en Google Play",
+                section_other: "📱 Otras Apps de MaxStudio",
+                other_desc: "Herramientas divertidas y útiles para el día a día.",
+                hotwheels_desc: "Escanea tus coches Hot Wheels y descubre información, rarezas y mucho más. ¡La colección cobra vida!",
+                pokemon_desc: "Escanea tus cartas Pokémon y obtén información, valores y datos de cada carta. ¡Atrapa todas!",
+                neon_desc: "Crea mensajes con letras de neón para fiestas, eventos y celebraciones. ¡Dale color a tus momentos especiales!",
+                section_books: "📚 Libros de MaxStudio",
+                books_desc: "Conocimiento para el éxito financiero, trading e historia de los NFT.",
+                book1_desc: "Historia, psicología y tácticas de los mejores traders del mundo. Aprende desde los fundamentos hasta estrategias avanzadas.",
+                book2_desc: "Los 10 Mandamientos para Crear Riqueza desde Cero. Principios, hábitos y mentalidad para construir riqueza desde cero.",
+                book3_desc: "El nacimiento, la burbuja y la caída de los activos digitales que prometieron cambiar internet. Un viaje completo.",
+                quote_text: '"En MaxStudio, cada trazo, cada línea de código y cada página escrita nacen del esfuerzo humano. Creatividad, protección y conocimiento para nuestra comunidad."',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Todos los derechos reservados.',
+                footer_hand: "Hecho a mano con ❤️ · Seguridad, arte y conocimiento para el mundo digital.",
+                btn_download: "Descargar en Google Play →",
+                btn_web: "Web oficial",
+                btn_buy: "Comprar en Google Play Books →",
+                btn_explore: "Explorar colección →"
+            },
+            en: {
+                hero_sub: "Innovation, Digital Art, Cybersecurity and Knowledge",
+                hero_tag: "🚀 Made 100% by hand · Since 2022",
+                section_what: 'What is <span style="color:#6c5ce7;">MaxStudio</span>?',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> began its journey in <strong>2022</strong> with the creation of the <strong>Zip World NFT</strong> collection on <strong>Binance</strong>. <span class="highlight-pink">The Zip World NFT collection was created 100% by hand, without artificial intelligence.</span> Each chapter of its animated shorts has a special meaning and a motivational message to improve aspects of life.`,
+                intro_p2: `Faced with Binance's restrictions for NFT creators, the community migrated to <strong>OpenSea</strong>, where MaxStudio expanded its artistic universe with multiple collections. But evolution didn't stop there: <span class="highlight-green">MaxStudio</span> suffered a cryptocurrency hack that changed its course forever. This incident led it to study cybersecurity, phishing, and network vulnerabilities to protect others. Today it also shares its knowledge through books on trading, financial success, and the history of NFTs.`,
+                section_nft: "🎨 NFT Collections (Art without AI)",
+                section_cyber: "🛡️ Cybersecurity Apps (Free)",
+                cyber_desc: "After the hack, MaxStudio created tools to protect users.",
+                securemap_desc: "Analyzes your WiFi network and detects intruders. Scans your data network to kick out those who sneak into your connection.",
+                malviora_desc: "Free antivirus that scans your device for malware. Security should be free for everyone.",
+                vpnfree_desc: "Browse the web anonymously and securely. Without leaving a trace and with total privacy.",
+                wallet_desc: `The <strong>only wallet</strong> with <span style="color:#00d2ff;">Anti-Phishing</span> and <span style="color:#ff6b6b;">Anti-2FA Attack</span> systems. Before you enter your data, the app activates and blocks entry if it detects danger. <strong>Play online with your friends, completely free</strong>, and forget about hackers.`,
+                stats_label: "Downloads on Google Play",
+                section_other: "📱 Other MaxStudio Apps",
+                other_desc: "Fun and useful tools for everyday life.",
+                hotwheels_desc: "Scan your Hot Wheels cars and discover information, rarities, and much more. The collection comes to life!",
+                pokemon_desc: "Scan your Pokémon cards and get information, values, and data for each card. Catch 'em all!",
+                neon_desc: "Create messages with neon letters for parties, events, and celebrations. Add color to your special moments!",
+                section_books: "📚 MaxStudio Books",
+                books_desc: "Knowledge for financial success, trading, and the history of NFTs.",
+                book1_desc: "History, psychology, and tactics of the best traders in the world. Learn from the fundamentals to advanced strategies.",
+                book2_desc: "The 10 Commandments to Create Wealth from Scratch. Principles, habits, and mindset to build wealth from zero.",
+                book3_desc: "The birth, the bubble, and the fall of the digital assets that promised to change the internet. A complete journey.",
+                quote_text: '"At MaxStudio, every stroke, every line of code, and every page written is born from human effort. Creativity, protection, and knowledge for our community."',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. All rights reserved.',
+                footer_hand: "Made by hand with ❤️ · Security, art and knowledge for the digital world.",
+                btn_download: "Download on Google Play →",
+                btn_web: "Official website",
+                btn_buy: "Buy on Google Play Books →",
+                btn_explore: "Explore collection →"
+            },
+            fr: {
+                hero_sub: "Innovation, art numérique, cybersécurité et connaissance",
+                hero_tag: "🚀 Fait 100% à la main · Depuis 2022",
+                section_what: 'Qu\'est-ce que <span style="color:#6c5ce7;">MaxStudio</span> ?',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> a débuté son parcours en <strong>2022</strong> avec la création de la collection <strong>Zip World NFT</strong> sur <strong>Binance</strong>. <span class="highlight-pink">La collection Zip World NFT a été créée 100% à la main, sans intelligence artificielle.</span> Chaque chapitre de ses courts métrages animés a une signification particulière et un message motivationnel pour améliorer des aspects de la vie.`,
+                intro_p2: `Face aux restrictions de Binance pour les créateurs de NFT, la communauté a migré vers <strong>OpenSea</strong>, où MaxStudio a élargi son univers artistique avec de multiples collections. Mais l'évolution ne s'est pas arrêtée là : <span class="highlight-green">MaxStudio</span> a subi un piratage de cryptomonnaies qui a changé son cap pour toujours. Cet incident l'a amené à étudier la cybersécurité, le phishing et les vulnérabilités réseau pour protéger les autres. Aujourd'hui, il partage également ses connaissances à travers des livres sur le trading, la réussite financière et l'histoire des NFT.`,
+                section_nft: "🎨 Collections NFT (Art sans IA)",
+                section_cyber: "🛡️ Apps de Cybersécurité (Gratuites)",
+                cyber_desc: "Après le piratage, MaxStudio a créé des outils pour protéger les utilisateurs.",
+                securemap_desc: "Analyse votre réseau WiFi et détecte les intrus. Scanne votre réseau de données pour expulser ceux qui se faufilent dans votre connexion.",
+                malviora_desc: "Antivirus gratuit qui scanne votre appareil à la recherche de logiciels malveillants. La sécurité devrait être gratuite pour tous.",
+                vpnfree_desc: "Naviguez sur le Web de manière anonyme et sécurisée. Sans laisser de trace et avec une confidentialité totale.",
+                wallet_desc: `Le <strong>seul portefeuille</strong> avec des systèmes <span style="color:#00d2ff;">Anti-Phishing</span> et <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Avant que vous saisissiez vos données, l'application s'active et bloque l'entrée si elle détecte un danger. <strong>Jouez en ligne avec vos amis, totalement gratuit</strong>, et oubliez les pirates.`,
+                stats_label: "Téléchargements sur Google Play",
+                section_other: "📱 Autres Apps de MaxStudio",
+                other_desc: "Des outils amusants et utiles pour la vie quotidienne.",
+                hotwheels_desc: "Scannez vos voitures Hot Wheels et découvrez des informations, des raretés et bien plus encore. La collection prend vie !",
+                pokemon_desc: "Scannez vos cartes Pokémon et obtenez des informations, des valeurs et des données pour chaque carte. Attrapez-les toutes !",
+                neon_desc: "Créez des messages avec des lettres néon pour les fêtes, les événements et les célébrations. Ajoutez de la couleur à vos moments spéciaux !",
+                section_books: "📚 Livres de MaxStudio",
+                books_desc: "Connaissances pour la réussite financière, le trading et l'histoire des NFT.",
+                book1_desc: "Histoire, psychologie et tactiques des meilleurs traders du monde. Apprenez des fondamentaux aux stratégies avancées.",
+                book2_desc: "Les 10 Commandements pour Créer la Richesse à Partir de Zéro. Principes, habitudes et état d'esprit pour construire la richesse à partir de zéro.",
+                book3_desc: "La naissance, la bulle et la chute des actifs numériques qui ont promis de changer Internet. Un voyage complet.",
+                quote_text: '"Chez MaxStudio, chaque trait, chaque ligne de code et chaque page écrite naissent de l\'effort humain. Créativité, protection et connaissance pour notre communauté."',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Tous droits réservés.',
+                footer_hand: "Fait à la main avec ❤️ · Sécurité, art et connaissance pour le monde numérique.",
+                btn_download: "Télécharger sur Google Play →",
+                btn_web: "Site officiel",
+                btn_buy: "Acheter sur Google Play Books →",
+                btn_explore: "Explorer la collection →"
+            },
+            it: {
+                hero_sub: "Innovazione, Arte Digitale, Cybersecurity e Conoscenza",
+                hero_tag: "🚀 Fatto 100% a mano · Dal 2022",
+                section_what: 'Cos\'è <span style="color:#6c5ce7;">MaxStudio</span>?',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> ha iniziato il suo percorso nel <strong>2022</strong> con la creazione della collezione <strong>Zip World NFT</strong> su <strong>Binance</strong>. <span class="highlight-pink">La collezione Zip World NFT è stata creata 100% a mano, senza intelligenza artificiale.</span> Ogni capitolo dei suoi corti animati ha un significato speciale e un messaggio motivazionale per migliorare aspetti della vita.`,
+                intro_p2: `Di fronte alle restrizioni di Binance per i creatori di NFT, la comunità è migrata su <strong>OpenSea</strong>, dove MaxStudio ha ampliato il suo universo artistico con molteplici collezioni. Ma l'evoluzione non si è fermata qui: <span class="highlight-green">MaxStudio</span> ha subito un hack di criptovalute che ha cambiato per sempre la sua rotta. Questo incidente lo ha portato a studiare cybersecurity, phishing e vulnerabilità di rete per proteggere gli altri. Oggi condivide anche la sua conoscenza attraverso libri sul trading, il successo finanziario e la storia degli NFT.`,
+                section_nft: "🎨 Collezioni NFT (Arte senza IA)",
+                section_cyber: "🛡️ App di Cybersecurity (Gratuite)",
+                cyber_desc: "Dopo l'hack, MaxStudio ha creato strumenti per proteggere gli utenti.",
+                securemap_desc: "Analizza la tua rete WiFi e rileva gli intrusi. Scansiona la tua rete dati per cacciare chi si intrufola nella tua connessione.",
+                malviora_desc: "Antivirus gratuito che scansiona il tuo dispositivo alla ricerca di malware. La sicurezza dovrebbe essere gratuita per tutti.",
+                vpnfree_desc: "Naviga sul web in modo anonimo e sicuro. Senza lasciare tracce e con totale privacy.",
+                wallet_desc: `L'<strong>unico wallet</strong> con sistemi <span style="color:#00d2ff;">Anti-Phishing</span> e <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Prima che inserisci i tuoi dati, l'app si attiva e blocca l'ingresso se rileva un pericolo. <strong>Gioca online con i tuoi amici, completamente gratuito</strong>, e dimentica gli hacker.`,
+                stats_label: "Download su Google Play",
+                section_other: "📱 Altre App di MaxStudio",
+                other_desc: "Strumenti divertenti e utili per la vita quotidiana.",
+                hotwheels_desc: "Scansiona le tue auto Hot Wheels e scopri informazioni, rarità e molto altro. La collezione prende vita!",
+                pokemon_desc: "Scansiona le tue carte Pokémon e ottieni informazioni, valori e dati per ogni carta. Acchiappali tutti!",
+                neon_desc: "Crea messaggi con lettere al neon per feste, eventi e celebrazioni. Aggiungi colore ai tuoi momenti speciali!",
+                section_books: "📚 Libri di MaxStudio",
+                books_desc: "Conoscenza per il successo finanziario, il trading e la storia degli NFT.",
+                book1_desc: "Storia, psicologia e tattiche dei migliori trader del mondo. Impara dai fondamenti alle strategie avanzate.",
+                book2_desc: "I 10 Comandamenti per Creare Ricchezza da Zero. Principi, abitudini e mentalità per costruire ricchezza da zero.",
+                book3_desc: "La nascita, la bolla e il crollo degli asset digitali che hanno promesso di cambiare internet. Un viaggio completo.",
+                quote_text: '"In MaxStudio, ogni tratto, ogni riga di codice e ogni pagina scritta nascono dallo sforzo umano. Creatività, protezione e conoscenza per la nostra comunità."',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Tutti i diritti riservati.',
+                footer_hand: "Fatto a mano con ❤️ · Sicurezza, arte e conoscenza per il mondo digitale.",
+                btn_download: "Scarica su Google Play →",
+                btn_web: "Sito ufficiale",
+                btn_buy: "Acquista su Google Play Books →",
+                btn_explore: "Esplora la collezione →"
+            },
+            zh: {
+                hero_sub: "创新、数字艺术、网络安全与知识",
+                hero_tag: "🚀 100% 手工制作 · 自 2022 年起",
+                section_what: '什么是 <span style="color:#6c5ce7;">MaxStudio</span>？',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> 于 <strong>2022 年</strong> 起步，在 <strong>币安</strong> 上创建了 <strong>Zip World NFT</strong> 系列。 <span class="highlight-pink">Zip World NFT 系列是 100% 手工制作的，没有使用人工智能。</span> 其动画短片的每一章都有特殊含义和励志信息，以改善生活的各个方面。`,
+                intro_p2: `面对币安对 NFT 创作者的限制，社区迁移到了 <strong>OpenSea</strong>，MaxStudio 在那里通过多个系列扩展了其艺术世界。但发展并未止步：<span class="highlight-green">MaxStudio</span> 遭受了一次加密货币黑客攻击，这永远改变了它的方向。这一事件促使它研究网络安全、网络钓鱼和网络漏洞以保护他人。如今，它还通过有关交易、金融成功和 NFT 历史的书籍分享其知识。`,
+                section_nft: "🎨 NFT 系列（无 AI 艺术）",
+                section_cyber: "🛡️ 网络安全应用（免费）",
+                cyber_desc: "遭受黑客攻击后，MaxStudio 创建了工具来保护用户。",
+                securemap_desc: "分析您的 WiFi 网络并检测入侵者。扫描您的数据网络，以驱逐那些偷偷潜入您连接的人。",
+                malviora_desc: "免费杀毒软件，可扫描您的设备是否存在恶意软件。安全对每个人都应该是免费的。",
+                vpnfree_desc: "匿名安全地浏览网页。不留下任何痕迹，完全保护隐私。",
+                wallet_desc: `具有 <span style="color:#00d2ff;">反网络钓鱼</span> 和 <span style="color:#ff6b6b;">反 2FA 攻击</span> 系统的 <strong>唯一钱包</strong>。在您输入数据之前，如果检测到危险，应用程序会激活并阻止进入。<strong>与您的朋友在线玩游戏，完全免费</strong>，并忘记黑客。`,
+                stats_label: "Google Play 下载量",
+                section_other: "📱 MaxStudio 的其他应用",
+                other_desc: "适合日常生活的有趣实用工具。",
+                hotwheels_desc: "扫描您的 Hot Wheels 汽车，发现信息、稀有物品等。系列栩栩如生！",
+                pokemon_desc: "扫描您的 Pokémon 卡，获取每张卡的信息、价值和数据。全都抓住！",
+                neon_desc: "为派对、活动和庆祝活动创建带有霓虹灯字母的消息。为您的重要时刻增添色彩！",
+                section_books: "📚 MaxStudio 书籍",
+                books_desc: "关于金融成功、交易和 NFT 历史的知识。",
+                book1_desc: "世界上最佳交易者的历史、心理和战术。从基础知识到高级策略学习。",
+                book2_desc: "从零开始创造财富的 10 条戒律。从零开始积累财富的原则、习惯和心态。",
+                book3_desc: "承诺改变互联网的数字资产的诞生、泡沫和衰落。完整的旅程。",
+                quote_text: '"在 MaxStudio，每一笔、每一行代码和每一页文字都源于人类的努力。为我们社区的创造力、保护和知识。"',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>。保留所有权利。',
+                footer_hand: "用心手工制作 ❤️ · 为数字世界提供安全、艺术和知识。",
+                btn_download: "在 Google Play 下载 →",
+                btn_web: "官方网站",
+                btn_buy: "在 Google Play Books 购买 →",
+                btn_explore: "探索系列 →"
+            },
+            ru: {
+                hero_sub: "Инновации, цифровое искусство, кибербезопасность и знания",
+                hero_tag: "🚀 Сделано 100% вручную · С 2022 года",
+                section_what: 'Что такое <span style="color:#6c5ce7;">MaxStudio</span>?',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> начал свой путь в <strong>2022</strong> году с создания коллекции <strong>Zip World NFT</strong> на <strong>Binance</strong>. <span class="highlight-pink">Коллекция Zip World NFT была создана 100% вручную, без искусственного интеллекта.</span> Каждая глава его анимированных короткометражек имеет особое значение и мотивационное послание для улучшения аспектов жизни.`,
+                intro_p2: `Столкнувшись с ограничениями Binance для создателей NFT, сообщество мигрировало на <strong>OpenSea</strong>, где MaxStudio расширил свою художественную вселенную множеством коллекций. Но эволюция не остановилась на этом: <span class="highlight-green">MaxStudio</span> пережил взлом криптовалюты, который навсегда изменил его курс. Этот инцидент побудил его изучать кибербезопасность, фишинг и сетевые уязвимости для защиты других. Сегодня он также делится своими знаниями через книги о трейдинге, финансовом успехе и истории NFT.`,
+                section_nft: "🎨 Коллекции NFT (Искусство без ИИ)",
+                section_cyber: "🛡️ Приложения кибербезопасности (Бесплатно)",
+                cyber_desc: "После взлома MaxStudio создал инструменты для защиты пользователей.",
+                securemap_desc: "Анализирует вашу WiFi-сеть и обнаруживает злоумышленников. Сканирует вашу сеть данных, чтобы выгнать тех, кто проникает в ваше соединение.",
+                malviora_desc: "Бесплатный антивирус, который сканирует ваше устройство на наличие вредоносных программ. Безопасность должна быть бесплатной для всех.",
+                vpnfree_desc: "Путешествуйте по сети анонимно и безопасно. Не оставляя следов и с полной конфиденциальностью.",
+                wallet_desc: `<strong>Единственный кошелек</strong> с системами <span style="color:#00d2ff;">Anti-Phishing</span> и <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Прежде чем вы введете свои данные, приложение активируется и блокирует вход, если обнаруживает опасность. <strong>Играйте онлайн с друзьями, совершенно бесплатно</strong>, и забудьте о хакерах.`,
+                stats_label: "Загрузок в Google Play",
+                section_other: "📱 Другие приложения MaxStudio",
+                other_desc: "Веселые и полезные инструменты для повседневной жизни.",
+                hotwheels_desc: "Сканируйте свои машины Hot Wheels и узнавайте информацию, редкости и многое другое. Коллекция оживает!",
+                pokemon_desc: "Сканируйте свои карты Pokémon и получайте информацию, ценности и данные по каждой карте. Поймайте их всех!",
+                neon_desc: "Создавайте сообщения с неоновыми буквами для вечеринок, мероприятий и праздников. Добавьте красок вашим особенным моментам!",
+                section_books: "📚 Книги MaxStudio",
+                books_desc: "Знания для финансового успеха, трейдинга и истории NFT.",
+                book1_desc: "История, психология и тактика лучших трейдеров мира. Учитесь от основ до продвинутых стратегий.",
+                book2_desc: "10 Заповедей для Создания Богатства с Нуля. Принципы, привычки и мышление для построения богатства с нуля.",
+                book3_desc: "Рождение, пузырь и падение цифровых активов, которые обещали изменить интернет. Полное путешествие.",
+                quote_text: '"В MaxStudio каждый штрих, каждая строка кода и каждая написанная страница рождаются из человеческих усилий. Креативность, защита и знания для нашего сообщества."',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Все права защищены.',
+                footer_hand: "Сделано вручную с ❤️ · Безопасность, искусство и знания для цифрового мира.",
+                btn_download: "Скачать в Google Play →",
+                btn_web: "Официальный сайт",
+                btn_buy: "Купить в Google Play Books →",
+                btn_explore: "Изучить коллекцию →"
+            },
+            de: {
+                hero_sub: "Innovation, digitale Kunst, Cybersicherheit und Wissen",
+                hero_tag: "🚀 100% handgemacht · Seit 2022",
+                section_what: 'Was ist <span style="color:#6c5ce7;">MaxStudio</span>?',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> begann seine Reise im Jahr <strong>2022</strong> mit der Erstellung der Kollektion <strong>Zip World NFT</strong> auf <strong>Binance</strong>. <span class="highlight-pink">Die Zip World NFT-Kollektion wurde 100% von Hand ohne künstliche Intelligenz erstellt.</span> Jedes Kapitel seiner animierten Kurzfilme hat eine besondere Bedeutung und eine motivierende Botschaft, um Aspekte des Lebens zu verbessern.`,
+                intro_p2: `Angesichts der Einschränkungen von Binance für NFT-Ersteller wanderte die Community zu <strong>OpenSea</strong> aus, wo MaxStudio sein künstlerisches Universum mit mehreren Kollektionen erweiterte. Aber die Entwicklung hörte hier nicht auf: <span class="highlight-green">MaxStudio</span> erlitt einen Kryptowährungs-Hack, der seinen Kurs für immer veränderte. Dieser Vorfall veranlasste es, Cybersicherheit, Phishing und Netzwerkschwachstellen zu studieren, um andere zu schützen. Heute teilt es sein Wissen auch durch Bücher über Trading, finanziellen Erfolg und die Geschichte der NFTs.`,
+                section_nft: "🎨 NFT-Kollektionen (Kunst ohne KI)",
+                section_cyber: "🛡️ Cybersicherheits-Apps (Kostenlos)",
+                cyber_desc: "Nach dem Hack entwickelte MaxStudio Tools zum Schutz der Benutzer.",
+                securemap_desc: "Analysiert Ihr WiFi-Netzwerk und erkennt Eindringlinge. Scannt Ihr Datennetzwerk, um diejenigen zu vertreiben, die sich in Ihre Verbindung schleichen.",
+                malviora_desc: "Kostenloses Antivirenprogramm, das Ihr Gerät auf Malware scannt. Sicherheit sollte für alle kostenlos sein.",
+                vpnfree_desc: "Surfen Sie anonym und sicher im Web. Ohne Spuren zu hinterlassen und mit völliger Privatsphäre.",
+                wallet_desc: `Die <strong>einzige Wallet</strong> mit <span style="color:#00d2ff;">Anti-Phishing</span>- und <span style="color:#ff6b6b;">Anti-2FA-Angriffs</span>-Systemen. Bevor Sie Ihre Daten eingeben, wird die App aktiv und blockiert den Zugang, wenn sie Gefahr erkennt. <strong>Spielen Sie online mit Ihren Freunden, völlig kostenlos</strong>, und vergessen Sie Hacker.`,
+                stats_label: "Downloads bei Google Play",
+                section_other: "📱 Andere MaxStudio-Apps",
+                other_desc: "Unterhaltsame und nützliche Tools für den Alltag.",
+                hotwheels_desc: "Scannen Sie Ihre Hot Wheels-Autos und entdecken Sie Informationen, Raritäten und vieles mehr. Die Kollektion erwacht zum Leben!",
+                pokemon_desc: "Scannen Sie Ihre Pokémon-Karten und erhalten Sie Informationen, Werte und Daten zu jeder Karte. Schnapp sie dir alle!",
+                neon_desc: "Erstellen Sie Nachrichten mit Neon-Buchstaben für Partys, Veranstaltungen und Feiern. Verleihen Sie Ihren besonderen Momenten Farbe!",
+                section_books: "📚 MaxStudio-Bücher",
+                books_desc: "Wissen für finanziellen Erfolg, Trading und die Geschichte der NFTs.",
+                book1_desc: "Geschichte, Psychologie und Taktiken der besten Trader der Welt. Lernen Sie von den Grundlagen bis zu fortgeschrittenen Strategien.",
+                book2_desc: "Die 10 Gebote für den Aufbau von Wohlstand von Grund auf. Prinzipien, Gewohnheiten und Denkweise, um Wohlstand von Null aufzubauen.",
+                book3_desc: "Die Geburt, die Blase und der Fall der digitalen Assets, die versprachen, das Internet zu verändern. Eine vollständige Reise.",
+                quote_text: '"Bei MaxStudio entstehen jeder Strich, jede Codezeile und jede geschriebene Seite aus menschlicher Anstrengung. Kreativität, Schutz und Wissen für unsere Gemeinschaft."',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Alle Rechte vorbehalten.',
+                footer_hand: "Mit ❤️ handgefertigt · Sicherheit, Kunst und Wissen für die digitale Welt.",
+                btn_download: "Bei Google Play herunterladen →",
+                btn_web: "Offizielle Website",
+                btn_buy: "Bei Google Play Books kaufen →",
+                btn_explore: "Kollektion erkunden →"
+            },
+            pt: {
+                hero_sub: "Inovação, Arte Digital, Cibersegurança e Conhecimento",
+                hero_tag: "🚀 Feito 100% à mão · Desde 2022",
+                section_what: 'O que é <span style="color:#6c5ce7;">MaxStudio</span>?',
+                intro_p1: `<span class="highlight-green">MaxStudio</span> começou sua jornada em <strong>2022</strong> com a criação da coleção <strong>Zip World NFT</strong> na <strong>Binance</strong>. <span class="highlight-pink">A coleção Zip World NFT foi criada 100% à mão, sem inteligência artificial.</span> Cada capítulo de seus curtas animados tem um significado especial e uma mensagem motivacional para melhorar aspectos da vida.`,
+                intro_p2: `Diante das restrições da Binance para criadores de NFT, a comunidade migrou para o <strong>OpenSea</strong>, onde a MaxStudio expandiu seu universo artístico com múltiplas coleções. Mas a evolução não parou por aí: <span class="highlight-green">MaxStudio</span> sofreu um hack de criptomoedas que mudou seu rumo para sempre. Esse incidente o levou a estudar cibersegurança, phishing e vulnerabilidades de rede para proteger os outros. Hoje, também compartilha seu conhecimento por meio de livros sobre trading, sucesso financeiro e a história dos NFTs.`,
+                section_nft: "🎨 Coleções NFT (Arte sem IA)",
+                section_cyber: "🛡️ Apps de Cibersegurança (Gratuitas)",
+                cyber_desc: "Após o hack, a MaxStudio criou ferramentas para proteger os usuários.",
+                securemap_desc: "Analisa sua rede WiFi e detecta intrusos. Escaneia sua rede de dados para expulsar quem se infiltra na sua conexão.",
+                malviora_desc: "Antivírus gratuito que escaneia seu dispositivo em busca de malware. A segurança deveria ser gratuita para todos.",
+                vpnfree_desc: "Navegue na web de forma anônima e segura. Sem deixar rastros e com total privacidade.",
+                wallet_desc: `A <strong>única wallet</strong> com sistemas <span style="color:#00d2ff;">Anti-Phishing</span> e <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Antes de você inserir seus dados, o app é ativado e bloqueia a entrada se detectar perigo. <strong>Jogue online com seus amigos, totalmente grátis</strong>, e esqueça os hackers.`,
+                stats_label: "Downloads no Google Play",
+                section_other: "📱 Outros Apps da MaxStudio",
+                other_desc: "Ferramentas divertidas e úteis para o dia a dia.",
+                hotwheels_desc: "Escaneie seus carros Hot Wheels e descubra informações, raridades e muito mais. A coleção ganha vida!",
+                pokemon_desc: "Escaneie suas cartas Pokémon e obtenha informações, valores e dados de cada carta. Pegue todos!",
+                neon_desc: "Crie mensagens com letras de neon para festas, eventos e celebrações. Dê cor aos seus momentos especiais!",
+                section_books: "📚 Livros da MaxStudio",
+                books_desc: "Conhecimento para sucesso financeiro, trading e história dos NFTs.",
+                book1_desc: "História, psicologia e táticas dos melhores traders do mundo. Aprenda desde os fundamentos até estratégias avançadas.",
+                book2_desc: "Os 10 Mandamentos para Criar Riqueza do Zero. Princípios, hábitos e mentalidade para construir riqueza a partir do zero.",
+                book3_desc: "O nascimento, a bolha e a queda dos ativos digitais que prometeram mudar a internet. Uma jornada completa.",
+                quote_text: '"Na MaxStudio, cada traço, cada linha de código e cada página escrita nascem do esforço humano. Criatividade, proteção e conhecimento para a nossa comunidade."',
+                footer_copy: '© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Todos os direitos reservados.',
+                footer_hand: "Feito à mão com ❤️ · Segurança, arte e conhecimento para o mundo digital.",
+                btn_download: "Baixar no Google Play →",
+                btn_web: "Site oficial",
+                btn_buy: "Comprar no Google Play Books →",
+                btn_explore: "Explorar coleção →"
+            }
+        };
+
+        const langSwitcher = document.getElementById('languageSwitcher');
+        const allLangSpans = langSwitcher.querySelectorAll('span');
+        const i18nElements = document.querySelectorAll('[data-i18n]');
+
+        function setLanguage(lang) {
+            // Update active class
+            allLangSpans.forEach(span => {
+                span.classList.remove('active');
+                if (span.dataset.lang === lang) {
+                    span.classList.add('active');
+                }
+            });
+
+            // Update all translatable elements
+            i18nElements.forEach(el => {
+                const key = el.dataset.i18n;
+                if (translations[lang] && translations[lang][key] !== undefined) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Event listeners for language switcher
+        allLangSpans.forEach(span => {
+            span.addEventListener('click', function(e) {
+                const lang = this.dataset.lang;
+                setLanguage(lang);
+            });
+        });
+
+        // Default language: Spanish
+        setLanguage('es');
+    </script>
 
 </body>
 </html>

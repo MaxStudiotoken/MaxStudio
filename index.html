@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TÍTULO CLAVE para Google -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MaxStudio | ¿Qué es MaxStudio? Historia, NFTs, Apps y Seguridad</title>
-    <!-- DESCRIPCIÓN para Google -->
-    <meta name="description" content="MaxStudio comenzó en 2022 creando NFTs a mano en Binance y OpenSea. Hoy desarrolla apps de ciberseguridad: antivirus, VPN, analizador de red y Wallet con 8.000 descargas. Todo libre de IA.">
-    <meta name="keywords" content="MaxStudio, que es maxstudio, NFTs, Zip World NFT, OpenSea, SecureMap, Malviora, VPNFree, WalletBank20, ciberseguridad, apps gratis">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://MaxStudiotoken.github.io/maxstudio/">
-    
-    <!-- Fuente profesional y estilos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    
+    <meta name="description" content="MaxStudio comenzó en 2022 creando NFTs a mano en Binance y OpenSea. Hoy desarrolla apps de ciberseguridad: antivirus, VPN, analizador de red y Wallet con 8.000 descargas. Todo libre de IA." />
+    <meta name="keywords" content="MaxStudio, que es maxstudio, NFTs, Zip World NFT, OpenSea, SecureMap, Malviora, VPNFree, WalletBank20, ciberseguridad, apps gratis" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://MaxStudiotoken.github.io/maxstudio/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', Arial, sans-serif;
             background-color: #0a0a12;
             color: #e0e0e0;
             line-height: 1.6;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
-        /* Header / Hero */
+
         .hero {
             background: linear-gradient(135deg, #0f0f1f 0%, #1a1a3a 50%, #0d0d1a 100%);
             padding: 80px 20px;
@@ -45,7 +41,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -56,12 +52,19 @@
             background: radial-gradient(circle at center, rgba(108, 92, 231, 0.1) 0%, transparent 70%);
             animation: pulseGlow 8s ease-in-out infinite;
         }
-        
+
         @keyframes pulseGlow {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 1; }
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
         }
-        
+
         .hero h1 {
             font-size: 4.5em;
             font-weight: 800;
@@ -73,7 +76,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .hero .subtitle {
             font-size: 1.5em;
             color: #b0b0d0;
@@ -83,7 +86,7 @@
             max-width: 700px;
             margin: 0 auto 10px;
         }
-        
+
         .hero .tagline {
             font-size: 1.1em;
             color: #8888aa;
@@ -97,7 +100,7 @@
             backdrop-filter: blur(5px);
             border: 1px solid rgba(108, 92, 231, 0.3);
         }
-        
+
         .section-title {
             font-size: 2.5em;
             font-weight: 700;
@@ -109,37 +112,37 @@
             display: inline-block;
             width: auto;
         }
-        
+
         .section-title-wrap {
             text-align: center;
         }
-        
+
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
-        
+
         .card {
             background: #14141f;
             padding: 30px;
             border-radius: 20px;
             border: 1px solid #2a2a40;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
         }
-        
+
         .card:hover {
             transform: translateY(-8px);
             border-color: #6c5ce7;
             box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
         }
-        
+
         .card img {
             width: 80px;
             height: 80px;
@@ -150,18 +153,18 @@
             padding: 8px;
             border: 1px solid #2a2a40;
         }
-        
+
         .card h3 {
             color: #6c5ce7;
             font-size: 1.5em;
             margin-bottom: 15px;
         }
-        
+
         .card p {
             color: #b0b0c8;
             margin-bottom: 15px;
         }
-        
+
         .card a {
             color: #00d2ff;
             text-decoration: none;
@@ -169,12 +172,12 @@
             transition: 0.3s;
             word-break: break-all;
         }
-        
+
         .card a:hover {
             color: #ffffff;
             text-decoration: underline;
         }
-        
+
         .badge {
             display: inline-block;
             background: #6c5ce7;
@@ -185,17 +188,17 @@
             font-weight: 700;
             margin-top: 10px;
         }
-        
+
         .highlight-green {
             color: #00d2ff;
             font-weight: 700;
         }
-        
+
         .highlight-pink {
             color: #ff6b6b;
             font-weight: 700;
         }
-        
+
         .stats-box {
             background: linear-gradient(135deg, #1a1a30, #0d0d1a);
             border: 1px solid #00d2ff;
@@ -205,19 +208,19 @@
             margin: 40px 0;
             box-shadow: 0 0 40px rgba(0, 210, 255, 0.05);
         }
-        
+
         .stats-box .number {
             font-size: 4em;
             font-weight: 800;
             color: #00d2ff;
             display: block;
         }
-        
+
         .stats-box .label {
             font-size: 1.2em;
             color: #b0b0d0;
         }
-        
+
         .wallet-logo {
             width: 120px;
             height: 120px;
@@ -228,31 +231,31 @@
             border: 2px solid #6c5ce7;
             margin-bottom: 20px;
         }
-        
+
         .list-links {
             list-style: none;
             padding: 0;
         }
-        
+
         .list-links li {
             margin-bottom: 12px;
             padding: 10px 15px;
-            background: rgba(255,255,255,0.03);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 10px;
             border-left: 3px solid #6c5ce7;
         }
-        
+
         .list-links li a {
             color: #e0e0e0;
             text-decoration: none;
             transition: 0.3s;
         }
-        
+
         .list-links li a:hover {
             color: #00d2ff;
             text-decoration: underline;
         }
-        
+
         footer {
             margin-top: 60px;
             padding: 40px 20px;
@@ -260,24 +263,35 @@
             border-top: 1px solid #2a2a40;
             color: #666688;
         }
-        
+
         footer a {
             color: #6c5ce7;
             text-decoration: none;
         }
-        
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8em; }
-            .hero .subtitle { font-size: 1.2em; }
-            .section-title { font-size: 2em; }
-            .card img { width: 60px; height: 60px; }
-            .wallet-logo { width: 80px; height: 80px; }
+            .hero h1 {
+                font-size: 2.8em;
+            }
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .card img {
+                width: 60px;
+                height: 60px;
+            }
+            .wallet-logo {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO PRINCIPAL -->
     <section class="hero">
         <div class="container">
             <h1>MaxStudio</h1>
@@ -292,18 +306,18 @@
         <div class="section-title-wrap">
             <h2 class="section-title">¿Qué es <span style="color:#6c5ce7;">MaxStudio</span>?</h2>
         </div>
-        
+
         <div style="background: #0f0f1a; padding: 30px; border-radius: 20px; border: 1px solid #2a2a40; margin-bottom: 40px;">
             <p style="font-size: 1.2rem; line-height: 1.8;">
-                <span class="highlight-green">MaxStudio</span> comenzó su andadura en <strong>2022</strong> con la creación de la colección 
-                <strong>Zip World NFT</strong> en <strong>Binance</strong>. Todas las creaciones, ya sean dibujos, animaciones o cortos, 
-                fueron realizadas <span class="highlight-pink">100% a mano</span>, sin inteligencia artificial. Cada capítulo de sus cortos 
+                <span class="highlight-green">MaxStudio</span> comenzó su andadura en <strong>2022</strong> con la creación de la colección
+                <strong>Zip World NFT</strong> en <strong>Binance</strong>. Todas las creaciones, ya sean dibujos, animaciones o cortos,
+                fueron realizadas <span class="highlight-pink">100% a mano</span>, sin inteligencia artificial. Cada capítulo de sus cortos
                 animados tiene un significado especial y un mensaje motivacional para mejorar aspectos de la vida.
             </p>
             <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 15px;">
-                Ante las restricciones de Binance para creadores de NFTs, la comunidad migró a <strong>OpenSea</strong>, 
-                donde MaxStudio expandió su universo artístico con múltiples colecciones. Pero la evolución no se detuvo ahí: 
-                <span class="highlight-green">MaxStudio</span> sufrió un hackeo de criptomonedas que cambió su rumbo para siempre. 
+                Ante las restricciones de Binance para creadores de NFTs, la comunidad migró a <strong>OpenSea</strong>,
+                donde MaxStudio expandió su universo artístico con múltiples colecciones. Pero la evolución no se detuvo ahí:
+                <span class="highlight-green">MaxStudio</span> sufrió un hackeo de criptomonedas que cambió su rumbo para siempre.
                 Ese incidente lo llevó a estudiar ciberseguridad, phishing y vulnerabilidades de red para proteger a los demás.
             </p>
         </div>
@@ -356,24 +370,30 @@
         <div class="card-grid">
             <!-- SecureMap -->
             <div class="card">
-                <img src="securemap.png" alt="SecureMap - Analizador de red WiFi">
+                <img src="securemap.png" alt="SecureMap - Analizador de red WiFi" />
                 <h3>📶 SecureMap</h3>
                 <p>Analiza tu red WiFi y detecta intrusos. Escanea tu red de datos para echar a quienes se cuelan en tu conexión.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.securemap" target="_blank">Descargar en Google Play →</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/cybersecurity-securemap/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
             </div>
             <!-- Malviora -->
             <div class="card">
-                <img src="malviaraantivirus.png" alt="Malviora - Antivirus gratuito">
+                <img src="malviaraantivirus.png" alt="Malviora - Antivirus gratuito" />
                 <h3>🦠 Malviora</h3>
                 <p>Antivirus gratuito que escanea tu dispositivo en busca de malware. La seguridad debería ser gratuita para todos.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.malviora" target="_blank">Descargar en Google Play →</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/malviora-antivirus/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
             </div>
             <!-- VPNFree -->
             <div class="card">
-                <img src="vpnfree.png" alt="VPNFree - VPN anónima y segura">
+                <img src="vpnfree.png" alt="VPNFree - VPN anónima y segura" />
                 <h3>🔒 VPNFree</h3>
                 <p>Navega por la web de forma anónima y segura. Sin dejar rastro y con total privacidad.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.vpnfree" target="_blank">Descargar en Google Play →</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/vpnfree/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
             </div>
         </div>
 
@@ -383,13 +403,13 @@
                 <span class="number">8.000+</span>
                 <span class="label">Descargas en Google Play</span>
             </div>
-            
+
             <div style="background: linear-gradient(145deg, #1a1a30, #111122); padding: 40px; border-radius: 30px; border: 2px solid #6c5ce7; text-align: center;">
-                <img src="bank20solana.png" alt="WalletBank20 - Logo" class="wallet-logo">
+                <img src="bank20solana.png" alt="WalletBank20 - Logo" class="wallet-logo" />
                 <h2 style="color: #ffffff; font-size: 2.5em; margin-bottom: 15px;">💎 WalletBank20</h2>
                 <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; color: #c0c0d0;">
-                    La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>. 
-                    Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro. 
+                    La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>.
+                    Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro.
                     <strong>Juega online con tus amigos, totalmente gratis</strong>, y olvídate de los hackers.
                 </p>
                 <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
@@ -398,17 +418,55 @@
                     <span class="badge" style="background:#6c5ce7; color:#fff;">🎮 Juegos P2P</span>
                     <span class="badge" style="background:#ffd700; color:#000;">💰 Token Propio</span>
                 </div>
-                <br>
+                <br />
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.walletbank20" target="_blank" style="display: inline-block; background: #6c5ce7; color: white; padding: 15px 40px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.2rem; margin-top: 20px; transition: 0.3s; border: 1px solid #8a7cec;">
                     📲 Descargar WalletBank20
                 </a>
             </div>
         </div>
 
+        <!-- NUEVA SECCIÓN: OTRAS APPS (SCANNERS Y MENSAJES NEON) -->
+        <div class="section-title-wrap">
+            <h2 class="section-title">📱 Otras Apps de MaxStudio</h2>
+        </div>
+        <p style="text-align:center; color:#8888aa; margin-bottom:30px;">Herramientas divertidas y útiles para el día a día.</p>
+
+        <div class="card-grid">
+            <!-- Hot Wheels Scanner -->
+            <div class="card">
+                <img src="hotwheels.png" alt="Hot Wheels Scanner" />
+                <h3>🏎️ Hot Wheels Scanner</h3>
+                <p>Escanea tus coches Hot Wheels y descubre información, rarezas y mucho más. ¡La colección cobra vida!</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.hotwheelsscanner" target="_blank">Descargar en Google Play →</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/hotwheels-scanner/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+            </div>
+
+            <!-- Pokémon Scanner -->
+            <div class="card">
+                <img src="pokemon.png" alt="Pokémon Card Scanner" />
+                <h3>⚡ Pokémon Scanner</h3>
+                <p>Escanea tus cartas Pokémon y obtén información, valores y datos de cada carta. ¡Atrapa todas!</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.pokemoncardscanner" target="_blank">Descargar en Google Play →</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/pokemon-card-scanner-2026/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+            </div>
+
+            <!-- Neon Messages -->
+            <div class="card">
+                <img src="neon.png" alt="Neon Messages - Mensajes de fiesta" />
+                <h3>💡 Neon Messages</h3>
+                <p>Crea mensajes con letras de neón para fiestas, eventos y celebraciones. ¡Dale color a tus momentos especiales!</p>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.neonmessages" target="_blank">Descargar en Google Play →</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/neon-messages-party/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;">Web oficial</a>
+            </div>
+        </div>
+
         <!-- RESUMEN FINAL / CITA -->
         <div style="margin-top: 60px; padding: 30px; background: #0f0f1a; border-radius: 20px; border-left: 5px solid #6c5ce7;">
             <p style="font-size: 1.3rem; font-style: italic; color: #d0d0e0;">
-                "En MaxStudio, cada trazo, cada línea de código y cada herramienta de seguridad nacen del esfuerzo humano. 
+                "En MaxStudio, cada trazo, cada línea de código y cada herramienta de seguridad nacen del esfuerzo humano.
                 Sin inteligencia artificial, solo creatividad y protección para nuestra comunidad."
             </p>
             <p style="text-align: right; color: #6c5ce7; font-weight: 700;">— MaxStudio Team</p>
@@ -416,7 +474,6 @@
 
     </div>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p>© 2026 <strong style="color:#6c5ce7;">MaxStudio</strong>. Todos los derechos reservados.</p>

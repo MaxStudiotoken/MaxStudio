@@ -25,6 +25,190 @@
             background-color: #0a0a12;
             color: #e0e0e0;
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ---- NEON ANIMATIONS ---- */
+        @keyframes neonGlowText {
+            0% {
+                text-shadow: 0 0 8px #6c5ce7, 0 0 20px #6c5ce7, 0 0 40px #00d2ff;
+            }
+            25% {
+                text-shadow: 0 0 8px #00d2ff, 0 0 20px #00d2ff, 0 0 40px #ff6b6b;
+            }
+            50% {
+                text-shadow: 0 0 8px #ff6b6b, 0 0 20px #ff6b6b, 0 0 40px #6c5ce7;
+            }
+            75% {
+                text-shadow: 0 0 8px #ffd700, 0 0 20px #ffd700, 0 0 40px #00d2ff;
+            }
+            100% {
+                text-shadow: 0 0 8px #6c5ce7, 0 0 20px #6c5ce7, 0 0 40px #00d2ff;
+            }
+        }
+
+        @keyframes neonBorderGlow {
+            0% {
+                border-color: #6c5ce7;
+                box-shadow: 0 0 15px rgba(108, 92, 231, 0.3), inset 0 0 15px rgba(108, 92, 231, 0.05);
+            }
+            33% {
+                border-color: #00d2ff;
+                box-shadow: 0 0 25px rgba(0, 210, 255, 0.4), inset 0 0 20px rgba(0, 210, 255, 0.05);
+            }
+            66% {
+                border-color: #ff6b6b;
+                box-shadow: 0 0 25px rgba(255, 107, 107, 0.4), inset 0 0 20px rgba(255, 107, 107, 0.05);
+            }
+            100% {
+                border-color: #6c5ce7;
+                box-shadow: 0 0 15px rgba(108, 92, 231, 0.3), inset 0 0 15px rgba(108, 92, 231, 0.05);
+            }
+        }
+
+        @keyframes neonPulseBg {
+            0% {
+                background: radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.15), transparent 70%);
+            }
+            33% {
+                background: radial-gradient(circle at 80% 70%, rgba(0, 210, 255, 0.15), transparent 70%);
+            }
+            66% {
+                background: radial-gradient(circle at 40% 80%, rgba(255, 107, 107, 0.15), transparent 70%);
+            }
+            100% {
+                background: radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.15), transparent 70%);
+            }
+        }
+
+        .neon-title {
+            animation: neonGlowText 4s ease-in-out infinite;
+        }
+
+        .neon-border {
+            animation: neonBorderGlow 5s ease-in-out infinite;
+        }
+
+        .hero {
+            background: #0a0a12;
+            padding: 60px 20px 80px 20px;
+            text-align: center;
+            border-bottom: 3px solid #6c5ce7;
+            position: relative;
+            overflow: hidden;
+            animation: neonPulseBg 8s ease-in-out infinite;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(108, 92, 231, 0.08), transparent 70%);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.9;
+            }
+        }
+
+        .hero-logo-wrapper {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .hero-logo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #6c5ce7;
+            box-shadow: 0 0 40px rgba(108, 92, 231, 0.5);
+            animation: neonBorderGlow 5s ease-in-out infinite;
+            background: #0a0a12;
+            padding: 6px;
+        }
+
+        .hero-logo-fallback {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d2ff, #6c5ce7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            border: 4px solid #6c5ce7;
+            box-shadow: 0 0 40px rgba(108, 92, 231, 0.5);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            animation: neonBorderGlow 5s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: 4.8rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, #00d2ff, #6c5ce7, #ff6b6b, #ffd700);
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientMove 6s ease-in-out infinite;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero .subtitle {
+            font-size: 1.6rem;
+            color: #c0c0e0;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto 10px;
+            text-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
+        }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: #b0b0d0;
+            position: relative;
+            z-index: 1;
+            margin-top: 15px;
+            background: rgba(108, 92, 231, 0.12);
+            padding: 10px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(108, 92, 231, 0.4);
+            animation: neonBorderGlow 5s ease-in-out infinite;
         }
 
         .container {
@@ -38,7 +222,7 @@
             top: 0;
             z-index: 1000;
             background: rgba(10, 10, 18, 0.92);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
             border-bottom: 1px solid #2a2a40;
             padding: 10px 20px;
             display: flex;
@@ -46,133 +230,44 @@
             flex-wrap: wrap;
             gap: 8px 16px;
         }
+
         .lang-switcher span {
             cursor: pointer;
-            font-size: 1.1rem;
-            padding: 4px 10px;
+            font-size: 1.05rem;
+            padding: 4px 12px;
             border-radius: 30px;
             transition: 0.3s;
             color: #8888aa;
             font-weight: 600;
             letter-spacing: 0.5px;
         }
+
         .lang-switcher span:hover {
             background: rgba(108, 92, 231, 0.2);
             color: #ffffff;
         }
+
         .lang-switcher span.active {
             background: #6c5ce7;
             color: #ffffff;
-            box-shadow: 0 0 15px rgba(108, 92, 231, 0.4);
+            box-shadow: 0 0 20px rgba(108, 92, 231, 0.5);
         }
+
         .lang-switcher .flag {
             margin-right: 4px;
         }
 
-        .hero {
-            background: linear-gradient(135deg, #0f0f1f 0%, #1a1a3a 50%, #0d0d1a 100%);
-            padding: 60px 20px 80px 20px;
-            text-align: center;
-            border-bottom: 2px solid #6c5ce7;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, rgba(108, 92, 231, 0.1) 0%, transparent 70%);
-            animation: pulseGlow 8s ease-in-out infinite;
-        }
-
-        @keyframes pulseGlow {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 1; }
-        }
-
-        .hero-logo-wrapper {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .hero-logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #6c5ce7;
-            box-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
-        }
-
-        .hero-logo-fallback {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #00d2ff, #6c5ce7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: #ffffff;
-            border: 3px solid #6c5ce7;
-            box-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-        }
-
-        .hero h1 {
-            font-size: 4.5em;
-            font-weight: 800;
-            background: linear-gradient(90deg, #00d2ff, #6c5ce7, #ff6b6b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5em;
-            color: #b0b0d0;
-            font-weight: 400;
-            position: relative;
-            z-index: 1;
-            max-width: 700px;
-            margin: 0 auto 10px;
-        }
-
-        .hero .tagline {
-            font-size: 1.1em;
-            color: #8888aa;
-            position: relative;
-            z-index: 1;
-            margin-top: 15px;
-            background: rgba(108, 92, 231, 0.15);
-            padding: 10px 25px;
-            border-radius: 50px;
-            display: inline-block;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(108, 92, 231, 0.3);
-        }
-
         .section-title {
-            font-size: 2.5em;
+            font-size: 2.6rem;
             font-weight: 700;
             margin: 60px 0 30px 0;
             text-align: center;
             color: #ffffff;
-            border-bottom: 3px solid #6c5ce7;
             padding-bottom: 15px;
             display: inline-block;
             width: auto;
+            border-bottom: 4px solid transparent;
+            animation: neonBorderGlow 5s ease-in-out infinite;
         }
 
         .section-title-wrap {
@@ -181,28 +276,28 @@
 
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
 
         .card {
             background: #14141f;
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #2a2a40;
+            padding: 30px 20px;
+            border-radius: 24px;
+            border: 2px solid #6c5ce7;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            animation: neonBorderGlow 6s ease-in-out infinite;
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border-color: #6c5ce7;
-            box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(108, 92, 231, 0.25);
         }
 
         .card img {
@@ -217,20 +312,21 @@
         }
 
         .card .nft-cover {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 16px;
-            border: 2px solid #6c5ce7;
+            border: 3px solid #6c5ce7;
             margin-bottom: 15px;
             background: #1a1a2a;
             padding: 4px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: neonBorderGlow 5s ease-in-out infinite;
         }
 
         .card .nft-cover:hover {
-            transform: scale(1.05);
-            border-color: #00d2ff;
+            transform: scale(1.06);
+            box-shadow: 0 0 30px rgba(108, 92, 231, 0.4);
         }
 
         .card .book-cover {
@@ -240,15 +336,16 @@
             border-radius: 12px;
             padding: 4px;
             background: #111122;
-            border: 2px solid #6c5ce7;
+            border: 3px solid #6c5ce7;
             box-shadow: 0 8px 25px rgba(108, 92, 231, 0.25);
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: neonBorderGlow 5s ease-in-out infinite;
         }
 
         .card .book-cover:hover {
             transform: scale(1.05);
-            border-color: #00d2ff;
+            box-shadow: 0 0 40px rgba(108, 92, 231, 0.4);
         }
 
         .card .app-icon {
@@ -264,8 +361,9 @@
 
         .card h3 {
             color: #6c5ce7;
-            font-size: 1.5em;
+            font-size: 1.5rem;
             margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(108, 92, 231, 0.3);
         }
 
         .card p {
@@ -292,9 +390,10 @@
             color: white;
             padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.8em;
+            font-size: 0.8rem;
             font-weight: 700;
             margin-top: 10px;
+            box-shadow: 0 0 15px rgba(108, 92, 231, 0.3);
         }
 
         .highlight-green {
@@ -308,72 +407,104 @@
         }
 
         .stats-box {
-            background: linear-gradient(135deg, #1a1a30, #0d0d1a);
-            border: 1px solid #00d2ff;
-            border-radius: 20px;
+            background: linear-gradient(145deg, #1a1a30, #0d0d1a);
+            border: 2px solid #00d2ff;
+            border-radius: 24px;
             padding: 30px 40px;
             text-align: center;
             margin: 40px 0;
-            box-shadow: 0 0 40px rgba(0, 210, 255, 0.05);
+            box-shadow: 0 0 50px rgba(0, 210, 255, 0.08);
+            animation: neonBorderGlow 5s ease-in-out infinite;
         }
 
         .stats-box .number {
-            font-size: 4em;
+            font-size: 4.2rem;
             font-weight: 800;
             color: #00d2ff;
             display: block;
+            text-shadow: 0 0 30px rgba(0, 210, 255, 0.4);
         }
 
         .stats-box .label {
-            font-size: 1.2em;
+            font-size: 1.2rem;
             color: #b0b0d0;
         }
 
         .wallet-logo {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             object-fit: contain;
-            border-radius: 24px;
+            border-radius: 30px;
             background: #1a1a2a;
-            padding: 12px;
-            border: 2px solid #6c5ce7;
+            padding: 16px;
+            border: 3px solid #6c5ce7;
             margin-bottom: 20px;
+            animation: neonBorderGlow 5s ease-in-out infinite;
         }
 
         .zipworld-card {
             background: #14141f;
             padding: 25px;
-            border-radius: 20px;
-            border: 2px solid #6c5ce7;
+            border-radius: 24px;
+            border: 3px solid #6c5ce7;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
             text-align: center;
             flex: 1;
             min-width: 200px;
+            animation: neonBorderGlow 6s ease-in-out infinite;
         }
 
         .zipworld-card:hover {
-            transform: translateY(-5px);
-            border-color: #00d2ff;
-            box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.25);
         }
 
         .zipworld-card img {
-            width: 140px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
             border-radius: 16px;
-            border: 2px solid #6c5ce7;
+            border: 3px solid #6c5ce7;
             margin-bottom: 15px;
             background: #1a1a2a;
             padding: 4px;
+            animation: neonBorderGlow 5s ease-in-out infinite;
+        }
+
+        .intro-box {
+            background: #0f0f1a;
+            padding: 30px;
+            border-radius: 24px;
+            border: 2px solid #2a2a40;
+            margin-bottom: 40px;
+            animation: neonBorderGlow 6s ease-in-out infinite;
+        }
+
+        .intro-box p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .ai-section {
+            background: linear-gradient(145deg, #111122, #0a0a18);
+            border: 2px solid #ff6b6b;
+            border-radius: 24px;
+            padding: 30px;
+            margin: 40px 0;
+            animation: neonBorderGlow 5s ease-in-out infinite;
+            box-shadow: 0 0 40px rgba(255, 107, 107, 0.05);
+        }
+
+        .ai-section .section-title {
+            border-bottom-color: #ff6b6b;
         }
 
         footer {
             margin-top: 60px;
             padding: 40px 20px;
             text-align: center;
-            border-top: 1px solid #2a2a40;
+            border-top: 2px solid #2a2a40;
             color: #666688;
         }
 
@@ -382,18 +513,86 @@
             text-decoration: none;
         }
 
+        .btn-neon {
+            display: inline-block;
+            background: #6c5ce7;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            transition: 0.3s;
+            border: 2px solid #8a7cec;
+            box-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
+            animation: neonBorderGlow 4s ease-in-out infinite;
+        }
+
+        .btn-neon:hover {
+            background: #7b6df0;
+            transform: scale(1.04);
+            box-shadow: 0 0 50px rgba(108, 92, 231, 0.5);
+        }
+
+        .youtube-logo {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border-radius: 6px;
+        }
+
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8em; }
-            .hero .subtitle { font-size: 1.2em; }
-            .section-title { font-size: 2em; }
-            .card img { width: 80px; height: 80px; }
-            .card .nft-cover { width: 100px; height: 100px; }
-            .card .book-cover { width: 120px; height: 180px; }
-            .card .app-icon { width: 80px; height: 80px; }
-            .wallet-logo { width: 80px; height: 80px; }
-            .lang-switcher span { font-size: 0.85rem; padding: 2px 6px; }
-            .hero-logo, .hero-logo-fallback { width: 80px; height: 80px; font-size: 2rem; }
-            .zipworld-card img { width: 100px; height: 100px; }
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .card img {
+                width: 80px;
+                height: 80px;
+            }
+            .card .nft-cover {
+                width: 110px;
+                height: 110px;
+            }
+            .card .book-cover {
+                width: 120px;
+                height: 180px;
+            }
+            .card .app-icon {
+                width: 80px;
+                height: 80px;
+            }
+            .wallet-logo {
+                width: 100px;
+                height: 100px;
+            }
+            .lang-switcher span {
+                font-size: 0.85rem;
+                padding: 2px 8px;
+            }
+            .hero-logo,
+            .hero-logo-fallback {
+                width: 100px;
+                height: 100px;
+                font-size: 2.4rem;
+            }
+            .zipworld-card img {
+                width: 110px;
+                height: 110px;
+            }
+            .stats-box .number {
+                font-size: 3rem;
+            }
+            .intro-box p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -414,11 +613,11 @@
     <section class="hero">
         <div class="container">
             <div class="hero-logo-wrapper">
-                <img src="maxstudio.jpg" alt="MaxStudio Logo" class="hero-logo" onerror="this.style.display='none'; this.parentElement.querySelector('.hero-logo-fallback').style.display='flex';" />
+                <img src="maxstudio.png" alt="MaxStudio Logo" class="hero-logo" onerror="this.style.display='none'; this.parentElement.querySelector('.hero-logo-fallback').style.display='flex';" />
                 <div class="hero-logo-fallback" style="display:none;">MS</div>
             </div>
             <h1>MaxStudio</h1>
-            <p class="subtitle" data-i18n="hero_sub">Innovación, Arte Digital, Ciberseguridad y Conocimiento</p>
+            <p class="subtitle neon-title" data-i18n="hero_sub">Innovación, Arte Digital, Ciberseguridad y Conocimiento</p>
             <p class="tagline" data-i18n="hero_tag">🚀 Hecho 100% a mano · Desde 2022</p>
         </div>
     </section>
@@ -427,17 +626,17 @@
 
         <!-- INTRODUCCIÓN: ¿QUÉ ES MAXSTUDIO? -->
         <div class="section-title-wrap">
-            <h2 class="section-title" data-i18n="section_what">¿Qué es <span style="color:#6c5ce7;">MaxStudio</span>?</h2>
+            <h2 class="section-title neon-title" data-i18n="section_what">¿Qué es <span style="color:#6c5ce7;">MaxStudio</span>?</h2>
         </div>
 
-        <div style="background: #0f0f1a; padding: 30px; border-radius: 20px; border: 1px solid #2a2a40; margin-bottom: 40px;">
-            <p style="font-size: 1.2rem; line-height: 1.8;" data-i18n="intro_p1">
+        <div class="intro-box">
+            <p data-i18n="intro_p1">
                 <span class="highlight-green">MaxStudio</span> comenzó su andadura en <strong>2022</strong> con la creación de la colección
-                <strong>Zip World NFT</strong> en <strong>Binance</strong>. 
+                <strong>Zip World NFT</strong> en <strong>Binance</strong>.
                 <span class="highlight-pink">La colección Zip World NFT fue creada 100% a mano, sin inteligencia artificial.</span>
                 Cada capítulo de sus cortos animados tiene un significado especial y un mensaje motivacional para mejorar aspectos de la vida.
             </p>
-            <p style="font-size: 1.2rem; line-height: 1.8; margin-top: 15px;" data-i18n="intro_p2">
+            <p style="margin-top: 15px;" data-i18n="intro_p2">
                 Ante las restricciones de Binance para creadores de NFTs, la comunidad migró a <strong>OpenSea</strong>,
                 donde MaxStudio expandió su universo artístico con múltiples colecciones. Pero la evolución no se detuvo ahí:
                 <span class="highlight-green">MaxStudio</span> sufrió un hackeo de criptomonedas que cambió su rumbo para siempre.
@@ -446,14 +645,14 @@
             </p>
         </div>
 
-        <!-- SECCIÓN: ARTE Y NFTS -->
+        <!-- SECCIÓN: ARTE SIN IA (NFT) -->
         <div class="section-title-wrap">
-            <h2 class="section-title" data-i18n="section_nft">🎨 Colecciones NFT (Arte sin IA)</h2>
+            <h2 class="section-title neon-title" data-i18n="section_nft">🎨 Colecciones NFT (Arte sin IA)</h2>
         </div>
 
         <!-- Zip World NFT - destacado con imagen -->
         <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; margin-bottom: 40px;">
-            <div class="zipworld-card" style="flex:1; min-width:220px;">
+            <div class="zipworld-card">
                 <img src="zipworldnft.png" alt="Zip World NFT" />
                 <p><strong>🔹 Zip World NFT</strong></p>
                 <p style="font-size:0.9rem; color:#b0b0c8; margin: 10px 0;">Colección original de MaxStudio en Binance</p>
@@ -461,7 +660,9 @@
             </div>
             <div style="background:#14141f; padding:20px; border-radius:15px; border:1px solid #2a2a40; flex:1; min-width:200px; text-align:center;">
                 <p><strong>📺 Cortos Animados</strong></p>
-                <a href="https://www.youtube.com/channel/UC3ThxzYXtBANS7uNK-21bPQ" target="_blank" style="color:#00d2ff;">YouTube Channel</a>
+                <a href="https://www.youtube.com/channel/UC3ThxzYXtBANS7uNK-21bPQ" target="_blank" style="color:#00d2ff; display:inline-flex; align-items:center; gap:6px;">
+                    <img src="youtube_logo.png" alt="YouTube" class="youtube-logo" /> YouTube Channel
+                </a>
             </div>
             <div style="background:#14141f; padding:20px; border-radius:15px; border:1px solid #2a2a40; flex:1; min-width:200px; text-align:center;">
                 <p><strong>🖼️ Perfil OpenSea</strong></p>
@@ -469,7 +670,7 @@
             </div>
         </div>
 
-        <!-- Las 4 colecciones con imágenes -->
+        <!-- Las 4 colecciones sin IA -->
         <div class="card-grid">
             <!-- Crypto Gods -->
             <div class="card">
@@ -489,7 +690,7 @@
                 <h3>📜 History Crypto</h3>
                 <a href="https://opensea.io/collection/history-crypto-currency-collection" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-            <!-- WWI Vehicles (CORREGIDO: World_War_1.png) -->
+            <!-- WWI Vehicles -->
             <div class="card">
                 <img src="World_War_1.png" alt="World War I Military Vehicles" class="nft-cover" />
                 <h3>⚔️ WWI Vehicles</h3>
@@ -497,9 +698,41 @@
             </div>
         </div>
 
+        <!-- SECCIÓN: ARTE CON IA (NUEVA) -->
+        <div class="section-title-wrap" style="margin-top: 60px;">
+            <h2 class="section-title neon-title" style="border-bottom-color: #ff6b6b;" data-i18n="section_nft_ai">🤖 Arte con IA</h2>
+        </div>
+        <div class="ai-section">
+            <p style="font-size:1.2rem; text-align:center; color:#d0d0e0;" data-i18n="section_nft_ai_desc">
+                Descubre nuestras colecciones generadas con inteligencia artificial, disponibles en OpenSea.
+                Innovación y creatividad al servicio del arte digital.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; margin-top: 30px;">
+                <!-- Colección de ejemplo con IA (placeholder) -->
+                <div style="background:#14141f; padding:20px; border-radius:20px; border:2px solid #ff6b6b; flex:1; min-width:200px; text-align:center; animation: neonBorderGlow 6s ease-in-out infinite;">
+                    <img src="ai_collection_placeholder.png" alt="AI Collection" style="width:120px; height:120px; object-fit:cover; border-radius:16px; border:2px solid #ff6b6b; margin-bottom:10px;" onerror="this.style.display='none';" />
+                    <p><strong>🌌 AI Dreams</strong></p>
+                    <a href="https://opensea.io/BANK20/created" target="_blank" style="color:#ff6b6b;">Ver en OpenSea →</a>
+                </div>
+                <div style="background:#14141f; padding:20px; border-radius:20px; border:2px solid #ff6b6b; flex:1; min-width:200px; text-align:center; animation: neonBorderGlow 6s ease-in-out infinite;">
+                    <img src="ai_collection_placeholder2.png" alt="AI Collection 2" style="width:120px; height:120px; object-fit:cover; border-radius:16px; border:2px solid #ff6b6b; margin-bottom:10px;" onerror="this.style.display='none';" />
+                    <p><strong>🌀 Neural Visions</strong></p>
+                    <a href="https://opensea.io/BANK20/created" target="_blank" style="color:#ff6b6b;">Ver en OpenSea →</a>
+                </div>
+                <div style="background:#14141f; padding:20px; border-radius:20px; border:2px solid #ff6b6b; flex:1; min-width:200px; text-align:center; animation: neonBorderGlow 6s ease-in-out infinite;">
+                    <img src="ai_collection_placeholder3.png" alt="AI Collection 3" style="width:120px; height:120px; object-fit:cover; border-radius:16px; border:2px solid #ff6b6b; margin-bottom:10px;" onerror="this.style.display='none';" />
+                    <p><strong>✨ Quantum Art</strong></p>
+                    <a href="https://opensea.io/BANK20/created" target="_blank" style="color:#ff6b6b;">Ver en OpenSea →</a>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top:25px;">
+                <a href="https://opensea.io/BANK20/created" target="_blank" class="btn-neon" style="background:#ff6b6b; border-color:#ff6b6b;" data-i18n="btn_view_opensea">Explorar todas en OpenSea →</a>
+            </div>
+        </div>
+
         <!-- SECCIÓN: APLICACIONES DE SEGURIDAD -->
-        <div class="section-title-wrap">
-            <h2 class="section-title" data-i18n="section_cyber">🛡️ Apps de Ciberseguridad (Gratuitas)</h2>
+        <div class="section-title-wrap" style="margin-top: 60px;">
+            <h2 class="section-title neon-title" data-i18n="section_cyber">🛡️ Apps de Ciberseguridad (Gratuitas)</h2>
         </div>
         <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="cyber_desc">Tras el hackeo, MaxStudio creó herramientas para proteger a los usuarios.</p>
 
@@ -513,7 +746,7 @@
                 <br />
                 <a href="https://maxstudiotoken.github.io/cybersecurity-securemap/" target="_blank" style="font-size:0.9rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
-            <!-- Malviora (CORREGIDO: malvioraantivirus.png) -->
+            <!-- Malviora -->
             <div class="card">
                 <img src="malvioraantivirus.png" alt="Malviora - Antivirus gratuito" class="app-icon" />
                 <h3>🦠 Malviora</h3>
@@ -540,9 +773,9 @@
                 <span class="label" data-i18n="stats_label">Descargas en Google Play</span>
             </div>
 
-            <div style="background: linear-gradient(145deg, #1a1a30, #111122); padding: 40px; border-radius: 30px; border: 2px solid #6c5ce7; text-align: center;">
+            <div style="background: linear-gradient(145deg, #1a1a30, #111122); padding: 40px; border-radius: 30px; border: 3px solid #6c5ce7; text-align: center; animation: neonBorderGlow 5s ease-in-out infinite;">
                 <img src="bank20solana.png" alt="WalletBank20 - Logo" class="wallet-logo" />
-                <h2 style="color: #ffffff; font-size: 2.5em; margin-bottom: 15px;">💎 WalletBank20</h2>
+                <h2 style="color: #ffffff; font-size: 2.8rem; margin-bottom: 15px; text-shadow: 0 0 30px rgba(108,92,231,0.3);">💎 WalletBank20</h2>
                 <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; color: #c0c0d0;" data-i18n="wallet_desc">
                     La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>.
                     Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro.
@@ -555,15 +788,15 @@
                     <span class="badge" style="background:#ffd700; color:#000;">💰 Token Propio</span>
                 </div>
                 <br />
-                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.walletbank20" target="_blank" style="display: inline-block; background: #6c5ce7; color: white; padding: 15px 40px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.2rem; margin-top: 20px; transition: 0.3s; border: 1px solid #8a7cec;" data-i18n="btn_download">
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.walletbank20" target="_blank" class="btn-neon" data-i18n="btn_download">
                     📲 Descargar WalletBank20
                 </a>
             </div>
         </div>
 
-        <!-- NUEVA SECCIÓN: OTRAS APPS (SCANNERS Y MENSAJES NEON) -->
-        <div class="section-title-wrap">
-            <h2 class="section-title" data-i18n="section_other">📱 Otras Apps de MaxStudio</h2>
+        <!-- OTRAS APPS (SCANNERS Y MENSAJES NEON) -->
+        <div class="section-title-wrap" style="margin-top: 60px;">
+            <h2 class="section-title neon-title" data-i18n="section_other">📱 Otras Apps de MaxStudio</h2>
         </div>
         <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="other_desc">Herramientas divertidas y útiles para el día a día.</p>
 
@@ -602,9 +835,9 @@
             </div>
         </div>
 
-        <!-- NUEVA SECCIÓN: LIBROS PUBLICADOS (PORTADAS GRANDES) -->
-        <div class="section-title-wrap">
-            <h2 class="section-title" data-i18n="section_books">📚 Libros de MaxStudio</h2>
+        <!-- LIBROS PUBLICADOS -->
+        <div class="section-title-wrap" style="margin-top: 60px;">
+            <h2 class="section-title neon-title" data-i18n="section_books">📚 Libros de MaxStudio</h2>
         </div>
         <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="books_desc">Conocimiento para el éxito financiero, trading e historia de los NFT.</p>
 
@@ -634,8 +867,8 @@
             </div>
         </div>
 
-        <!-- RESUMEN FINAL / CITA -->
-        <div style="margin-top: 60px; padding: 30px; background: #0f0f1a; border-radius: 20px; border-left: 5px solid #6c5ce7;">
+        <!-- CITA FINAL -->
+        <div style="margin-top: 60px; padding: 30px; background: #0f0f1a; border-radius: 24px; border-left: 6px solid #6c5ce7; animation: neonBorderGlow 6s ease-in-out infinite;">
             <p style="font-size: 1.3rem; font-style: italic; color: #d0d0e0;" data-i18n="quote_text">
                 "En MaxStudio, cada trazo, cada línea de código y cada página escrita nacen del esfuerzo humano.
                 Creatividad, protección y conocimiento para nuestra comunidad."
@@ -666,6 +899,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> comenzó su andadura en <strong>2022</strong> con la creación de la colección <strong>Zip World NFT</strong> en <strong>Binance</strong>. <span class="highlight-pink">La colección Zip World NFT fue creada 100% a mano, sin inteligencia artificial.</span> Cada capítulo de sus cortos animados tiene un significado especial y un mensaje motivacional para mejorar aspectos de la vida.`,
                 intro_p2: `Ante las restricciones de Binance para creadores de NFTs, la comunidad migró a <strong>OpenSea</strong>, donde MaxStudio expandió su universo artístico con múltiples colecciones. Pero la evolución no se detuvo ahí: <span class="highlight-green">MaxStudio</span> sufrió un hackeo de criptomonedas que cambió su rumbo para siempre. Ese incidente lo llevó a estudiar ciberseguridad, phishing y vulnerabilidades de red para proteger a los demás. Hoy también comparte su conocimiento a través de libros sobre trading, éxito financiero y la historia de los NFT.`,
                 section_nft: "🎨 Colecciones NFT (Arte sin IA)",
+                section_nft_ai: "🤖 Arte con IA",
+                section_nft_ai_desc: "Descubre nuestras colecciones generadas con inteligencia artificial, disponibles en OpenSea. Innovación y creatividad al servicio del arte digital.",
+                btn_view_opensea: "Explorar todas en OpenSea →",
                 section_cyber: "🛡️ Apps de Ciberseguridad (Gratuitas)",
                 cyber_desc: "Tras el hackeo, MaxStudio creó herramientas para proteger a los usuarios.",
                 securemap_desc: "Analiza tu red WiFi y detecta intrusos. Escanea tu red de datos para echar a quienes se cuelan en tu conexión.",
@@ -698,6 +934,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> began its journey in <strong>2022</strong> with the creation of the <strong>Zip World NFT</strong> collection on <strong>Binance</strong>. <span class="highlight-pink">The Zip World NFT collection was created 100% by hand, without artificial intelligence.</span> Each chapter of its animated shorts has a special meaning and a motivational message to improve aspects of life.`,
                 intro_p2: `Faced with Binance's restrictions for NFT creators, the community migrated to <strong>OpenSea</strong>, where MaxStudio expanded its artistic universe with multiple collections. But evolution didn't stop there: <span class="highlight-green">MaxStudio</span> suffered a cryptocurrency hack that changed its course forever. This incident led it to study cybersecurity, phishing, and network vulnerabilities to protect others. Today it also shares its knowledge through books on trading, financial success, and the history of NFTs.`,
                 section_nft: "🎨 NFT Collections (Art without AI)",
+                section_nft_ai: "🤖 Art with AI",
+                section_nft_ai_desc: "Discover our collections generated with artificial intelligence, available on OpenSea. Innovation and creativity at the service of digital art.",
+                btn_view_opensea: "Explore all on OpenSea →",
                 section_cyber: "🛡️ Cybersecurity Apps (Free)",
                 cyber_desc: "After the hack, MaxStudio created tools to protect users.",
                 securemap_desc: "Analyzes your WiFi network and detects intruders. Scans your data network to kick out those who sneak into your connection.",
@@ -730,6 +969,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> a débuté son parcours en <strong>2022</strong> avec la création de la collection <strong>Zip World NFT</strong> sur <strong>Binance</strong>. <span class="highlight-pink">La collection Zip World NFT a été créée 100% à la main, sans intelligence artificielle.</span> Chaque chapitre de ses courts métrages animés a une signification particulière et un message motivationnel pour améliorer des aspects de la vie.`,
                 intro_p2: `Face aux restrictions de Binance pour les créateurs de NFT, la communauté a migré vers <strong>OpenSea</strong>, où MaxStudio a élargi son univers artistique avec de multiples collections. Mais l'évolution ne s'est pas arrêtée là : <span class="highlight-green">MaxStudio</span> a subi un piratage de cryptomonnaies qui a changé son cap pour toujours. Cet incident l'a amené à étudier la cybersécurité, le phishing et les vulnérabilités réseau pour protéger les autres. Aujourd'hui, il partage également ses connaissances à travers des livres sur le trading, la réussite financière et l'histoire des NFT.`,
                 section_nft: "🎨 Collections NFT (Art sans IA)",
+                section_nft_ai: "🤖 Art avec IA",
+                section_nft_ai_desc: "Découvrez nos collections générées par intelligence artificielle, disponibles sur OpenSea. Innovation et créativité au service de l'art numérique.",
+                btn_view_opensea: "Explorer tout sur OpenSea →",
                 section_cyber: "🛡️ Apps de Cybersécurité (Gratuites)",
                 cyber_desc: "Après le piratage, MaxStudio a créé des outils pour protéger les utilisateurs.",
                 securemap_desc: "Analyse votre réseau WiFi et détecte les intrus. Scanne votre réseau de données pour expulser ceux qui se faufilent dans votre connexion.",
@@ -762,6 +1004,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> ha iniziato il suo percorso nel <strong>2022</strong> con la creazione della collezione <strong>Zip World NFT</strong> su <strong>Binance</strong>. <span class="highlight-pink">La collezione Zip World NFT è stata creata 100% a mano, senza intelligenza artificiale.</span> Ogni capitolo dei suoi corti animati ha un significato speciale e un messaggio motivazionale per migliorare aspetti della vita.`,
                 intro_p2: `Di fronte alle restrizioni di Binance per i creatori di NFT, la comunità è migrata su <strong>OpenSea</strong>, dove MaxStudio ha ampliato il suo universo artistico con molteplici collezioni. Ma l'evoluzione non si è fermata qui: <span class="highlight-green">MaxStudio</span> ha subito un hack di criptovalute che ha cambiato per sempre la sua rotta. Questo incidente lo ha portato a studiare cybersecurity, phishing e vulnerabilità di rete per proteggere gli altri. Oggi condivide anche la sua conoscenza attraverso libri sul trading, il successo finanziario e la storia degli NFT.`,
                 section_nft: "🎨 Collezioni NFT (Arte senza IA)",
+                section_nft_ai: "🤖 Arte con IA",
+                section_nft_ai_desc: "Scopri le nostre collezioni generate con intelligenza artificiale, disponibili su OpenSea. Innovazione e creatività al servizio dell'arte digitale.",
+                btn_view_opensea: "Esplora tutto su OpenSea →",
                 section_cyber: "🛡️ App di Cybersecurity (Gratuite)",
                 cyber_desc: "Dopo l'hack, MaxStudio ha creato strumenti per proteggere gli utenti.",
                 securemap_desc: "Analizza la tua rete WiFi e rileva gli intrusi. Scansiona la tua rete dati per cacciare chi si intrufola nella tua connessione.",
@@ -794,6 +1039,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> 于 <strong>2022 年</strong> 起步，在 <strong>币安</strong> 上创建了 <strong>Zip World NFT</strong> 系列。 <span class="highlight-pink">Zip World NFT 系列是 100% 手工制作的，没有使用人工智能。</span> 其动画短片的每一章都有特殊含义和励志信息，以改善生活的各个方面。`,
                 intro_p2: `面对币安对 NFT 创作者的限制，社区迁移到了 <strong>OpenSea</strong>，MaxStudio 在那里通过多个系列扩展了其艺术世界。但发展并未止步：<span class="highlight-green">MaxStudio</span> 遭受了一次加密货币黑客攻击，这永远改变了它的方向。这一事件促使它研究网络安全、网络钓鱼和网络漏洞以保护他人。如今，它还通过有关交易、金融成功和 NFT 历史的书籍分享其知识。`,
                 section_nft: "🎨 NFT 系列（无 AI 艺术）",
+                section_nft_ai: "🤖 AI 艺术",
+                section_nft_ai_desc: "探索我们使用人工智能生成的系列，可在 OpenSea 上查看。创新与创意为数字艺术服务。",
+                btn_view_opensea: "在 OpenSea 上浏览全部 →",
                 section_cyber: "🛡️ 网络安全应用（免费）",
                 cyber_desc: "遭受黑客攻击后，MaxStudio 创建了工具来保护用户。",
                 securemap_desc: "分析您的 WiFi 网络并检测入侵者。扫描您的数据网络，以驱逐那些偷偷潜入您连接的人。",
@@ -826,6 +1074,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> начал свой путь в <strong>2022</strong> году с создания коллекции <strong>Zip World NFT</strong> на <strong>Binance</strong>. <span class="highlight-pink">Коллекция Zip World NFT была создана 100% вручную, без искусственного интеллекта.</span> Каждая глава его анимированных короткометражек имеет особое значение и мотивационное послание для улучшения аспектов жизни.`,
                 intro_p2: `Столкнувшись с ограничениями Binance для создателей NFT, сообщество мигрировало на <strong>OpenSea</strong>, где MaxStudio расширил свою художественную вселенную множеством коллекций. Но эволюция не остановилась на этом: <span class="highlight-green">MaxStudio</span> пережил взлом криптовалюты, который навсегда изменил его курс. Этот инцидент побудил его изучать кибербезопасность, фишинг и сетевые уязвимости для защиты других. Сегодня он также делится своими знаниями через книги о трейдинге, финансовом успехе и истории NFT.`,
                 section_nft: "🎨 Коллекции NFT (Искусство без ИИ)",
+                section_nft_ai: "🤖 Искусство с ИИ",
+                section_nft_ai_desc: "Откройте для себя наши коллекции, созданные с помощью искусственного интеллекта, доступные на OpenSea. Инновации и креативность на службе цифрового искусства.",
+                btn_view_opensea: "Исследовать все на OpenSea →",
                 section_cyber: "🛡️ Приложения кибербезопасности (Бесплатно)",
                 cyber_desc: "После взлома MaxStudio создал инструменты для защиты пользователей.",
                 securemap_desc: "Анализирует вашу WiFi-сеть и обнаруживает злоумышленников. Сканирует вашу сеть данных, чтобы выгнать тех, кто проникает в ваше соединение.",
@@ -858,6 +1109,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> begann seine Reise im Jahr <strong>2022</strong> mit der Erstellung der Kollektion <strong>Zip World NFT</strong> auf <strong>Binance</strong>. <span class="highlight-pink">Die Zip World NFT-Kollektion wurde 100% von Hand ohne künstliche Intelligenz erstellt.</span> Jedes Kapitel seiner animierten Kurzfilme hat eine besondere Bedeutung und eine motivierende Botschaft, um Aspekte des Lebens zu verbessern.`,
                 intro_p2: `Angesichts der Einschränkungen von Binance für NFT-Ersteller wanderte die Community zu <strong>OpenSea</strong> aus, wo MaxStudio sein künstlerisches Universum mit mehreren Kollektionen erweiterte. Aber die Entwicklung hörte hier nicht auf: <span class="highlight-green">MaxStudio</span> erlitt einen Kryptowährungs-Hack, der seinen Kurs für immer veränderte. Dieser Vorfall veranlasste es, Cybersicherheit, Phishing und Netzwerkschwachstellen zu studieren, um andere zu schützen. Heute teilt es sein Wissen auch durch Bücher über Trading, finanziellen Erfolg und die Geschichte der NFTs.`,
                 section_nft: "🎨 NFT-Kollektionen (Kunst ohne KI)",
+                section_nft_ai: "🤖 Kunst mit KI",
+                section_nft_ai_desc: "Entdecken Sie unsere mit künstlicher Intelligenz generierten Kollektionen, verfügbar auf OpenSea. Innovation und Kreativität im Dienste der digitalen Kunst.",
+                btn_view_opensea: "Alle auf OpenSea erkunden →",
                 section_cyber: "🛡️ Cybersicherheits-Apps (Kostenlos)",
                 cyber_desc: "Nach dem Hack entwickelte MaxStudio Tools zum Schutz der Benutzer.",
                 securemap_desc: "Analysiert Ihr WiFi-Netzwerk und erkennt Eindringlinge. Scannt Ihr Datennetzwerk, um diejenigen zu vertreiben, die sich in Ihre Verbindung schleichen.",
@@ -890,6 +1144,9 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> começou sua jornada em <strong>2022</strong> com a criação da coleção <strong>Zip World NFT</strong> na <strong>Binance</strong>. <span class="highlight-pink">A coleção Zip World NFT foi criada 100% à mão, sem inteligência artificial.</span> Cada capítulo de seus curtas animados tem um significado especial e uma mensagem motivacional para melhorar aspectos da vida.`,
                 intro_p2: `Diante das restrições da Binance para criadores de NFT, a comunidade migrou para o <strong>OpenSea</strong>, onde a MaxStudio expandiu seu universo artístico com múltiplas coleções. Mas a evolução não parou por aí: <span class="highlight-green">MaxStudio</span> sofreu um hack de criptomoedas que mudou seu rumo para sempre. Esse incidente o levou a estudar cibersegurança, phishing e vulnerabilidades de rede para proteger os outros. Hoje, também compartilha seu conhecimento por meio de livros sobre trading, sucesso financeiro e a história dos NFTs.`,
                 section_nft: "🎨 Coleções NFT (Arte sem IA)",
+                section_nft_ai: "🤖 Arte com IA",
+                section_nft_ai_desc: "Descubra nossas coleções geradas com inteligência artificial, disponíveis no OpenSea. Inovação e criatividade a serviço da arte digital.",
+                btn_view_opensea: "Explorar todas no OpenSea →",
                 section_cyber: "🛡️ Apps de Cibersegurança (Gratuitas)",
                 cyber_desc: "Após o hack, a MaxStudio criou ferramentas para proteger os usuários.",
                 securemap_desc: "Analisa sua rede WiFi e detecta intrusos. Escaneia sua rede de dados para expulsar quem se infiltra na sua conexão.",

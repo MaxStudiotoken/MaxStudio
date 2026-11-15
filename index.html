@@ -21,7 +21,6 @@
             color: #e0e0e0; 
             line-height: 1.6; 
             overflow-x: hidden;
-            /* Fondo de cuadrícula sutil para un look más de creador/dev */
             background-image: 
                 linear-gradient(rgba(108, 92, 231, 0.05) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(108, 92, 231, 0.05) 1px, transparent 1px);
@@ -93,8 +92,12 @@
         .card img:hover { transform: scale(1.1) rotate(2deg); box-shadow: 0 0 40px rgba(108, 92, 231, 0.4); }
         .card h3 { color: #ffffff; font-size: 1.5rem; margin-bottom: 12px; text-shadow: 0 0 15px rgba(108, 92, 231, 0.5); font-weight: 700; }
         .card p { color: #b0b0c8; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; flex-grow: 1; }
+        
+        /* Estilo unificado para los botones de las tarjetas */
         .card a { color: #00d2ff; text-decoration: none; font-weight: 700; transition: 0.3s; word-break: break-all; display: inline-block; padding: 8px 16px; border-radius: 30px; background: rgba(0, 210, 255, 0.1); }
         .card a:hover { color: #000; background: #00d2ff; text-decoration: none; box-shadow: 0 0 20px rgba(0, 210, 255, 0.5); }
+        .card a.secondary-link { background: transparent; color: #b0b0c8; font-size: 0.85rem; padding: 4px; margin-top: 5px; }
+        .card a.secondary-link:hover { background: transparent; color: #ffffff; text-decoration: underline; box-shadow: none; }
 
         .badge { display: inline-block; background: #6c5ce7; color: white; padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-top: 10px; box-shadow: 0 0 15px rgba(108, 92, 231, 0.4); }
         .badge-new { background: #ffd700; color: #000; animation: blink 1.5s infinite; box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
@@ -221,7 +224,6 @@
         <div class="mining-section">
             <span class="badge badge-new" style="position: absolute; top: 20px; right: 20px; font-size: 1rem; padding: 8px 20px;">¡NUEVO!</span>
             
-            <!-- Contenedor para los logos -->
             <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
                 <img src="banert_miner.png" alt="Banner Bank2.0" style="max-width: 100%; height: auto; max-height: 120px; border-radius: 15px; box-shadow: 0 0 30px rgba(255,215,0,0.3);" onerror="this.style.display='none'"/>
                 <img src="logo_minado_bank2.png" alt="Logo Bank2.0" class="mining-logo" onerror="this.style.display='none'"/>
@@ -241,13 +243,12 @@
                 <span class="badge" style="background:rgba(108, 92, 231, 0.2); color:#6c5ce7; border: 1px solid #6c5ce7;">📱 Sin dispositivos físicos</span>
             </div>
 
-            <a href="https://github.com/MaxStudiotoken/bank20-mining" target="_blank" class="btn-neon" style="background: #ffd700; color: #000; border-color: #ffe066; box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);">
-                ⛏️ Explorar Bank 2.0 (GitHub)
+            <a href="https://play.google.com/store/apps/details?id=com.bank20.mining" target="_blank" class="btn-neon" style="background: #ffd700; color: #000; border-color: #ffe066; box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);">
+                ⛏️ Descargar Bank 2.0
             </a>
             <br />
-            <!-- Enlace provisional a la web de minería si la tienes -->
-            <a href="https://maxstudiotoken.github.io/bank20-mining/" target="_blank" style="font-size:0.95rem; color:#ffd700; display:inline-block; margin-top:20px; text-decoration: underline;" data-i18n="btn_web">
-                🌐 Web oficial de Minería
+            <a href="https://github.com/MaxStudiotoken/bank20-mining" target="_blank" style="font-size:0.95rem; color:#b0b0c8; display:inline-block; margin-top:20px; text-decoration: underline;">
+                💻 Ver Código en GitHub
             </a>
         </div>
 
@@ -354,7 +355,7 @@
                 <p data-i18n="securemap_desc">Analiza tu red WiFi y detecta intrusos.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.securemap" target="_blank" data-i18n="btn_download">Descargar →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/cybersecurity-securemap/" target="_blank" style="font-size:0.85rem; color:#b0b0c8; background: none;" data-i18n="btn_web">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/cybersecurity-securemap/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
             <div class="card">
                 <img src="malvioraantivirus.png" alt="Malviora" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
@@ -363,7 +364,7 @@
                 <p data-i18n="malviora_desc">Antivirus gratuito que escanea tu dispositivo.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.malviora" target="_blank" data-i18n="btn_download">Descargar →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/malviora-antivirus/" target="_blank" style="font-size:0.85rem; color:#b0b0c8; background: none;" data-i18n="btn_web">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/malviora-antivirus/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
             <div class="card">
                 <img src="vpnfree.png" alt="VPNFree" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
@@ -372,7 +373,7 @@
                 <p data-i18n="vpnfree_desc">Navega anónimo y seguro sin dejar rastro.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.vpnfree" target="_blank" data-i18n="btn_download">Descargar →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/vpnfree/" target="_blank" style="font-size:0.85rem; color:#b0b0c8; background: none;" data-i18n="btn_web">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/vpnfree/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
         </div>
 
@@ -398,7 +399,9 @@
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">✂️</div>
                 <h3>EditVideoFree</h3>
                 <p>Edita tus vídeos de forma rápida y gratuita directamente desde el navegador.</p>
-                <a href="https://maxstudiotoken.github.io/EditVideoFree/" target="_blank" data-i18n="btn_web">Web oficial →</a>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.editvideofreeevf" target="_blank" class="btn-download" style="background: rgba(0, 210, 255, 0.2); border: 1px solid #00d2ff; color: #00d2ff; margin-bottom: 5px;">📲 Descargar en Google Play</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/EditVideoFree/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
 
             <!-- NAC Note -->
@@ -407,7 +410,9 @@
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">📝</div>
                 <h3>NAC Note</h3>
                 <p>Alarma y contabilidad. Mantén tus finanzas y recordatorios bajo control.</p>
-                <a href="https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/" target="_blank" data-i18n="btn_web">Web oficial →</a>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.notepro" target="_blank" class="btn-download" style="background: rgba(0, 210, 255, 0.2); border: 1px solid #00d2ff; color: #00d2ff; margin-bottom: 5px;">📲 Descargar en Google Play</a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
 
             <!-- Traductor -->
@@ -416,7 +421,7 @@
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">🌐</div>
                 <h3>Traductor</h3>
                 <p>Traduce texto y documentos de forma rápida y sencilla.</p>
-                <a href="#" target="_blank" data-i18n="btn_web">Web oficial →</a>
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.multitraductor" target="_blank" class="btn-download" style="background: rgba(0, 210, 255, 0.2); border: 1px solid #00d2ff; color: #00d2ff; margin-bottom: 5px;">📲 Descargar en Google Play</a>
             </div>
 
             <!-- Hot Wheels Scanner -->
@@ -427,7 +432,7 @@
                 <p data-i18n="hotwheels_desc">Escanea tus coches Hot Wheels.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.hotwheelsscanner" target="_blank" data-i18n="btn_download">Descargar →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/hotwheels-scanner/" target="_blank" style="font-size:0.85rem; color:#b0b0c8; background: none;" data-i18n="btn_web">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/hotwheels-scanner/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
 
             <!-- Pokémon Scanner -->
@@ -438,7 +443,7 @@
                 <p data-i18n="pokemon_desc">Escanea tus cartas Pokémon.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.pokemoncardscanner" target="_blank" data-i18n="btn_download">Descargar →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/pokemon-card-scanner-2026/" target="_blank" style="font-size:0.85rem; color:#b0b0c8; background: none;" data-i18n="btn_web">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/pokemon-card-scanner-2026/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
 
             <!-- SecureVault -->
@@ -476,7 +481,7 @@
                 <p data-i18n="neon_desc">Crea mensajes con letras de neón.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.neonmessages" target="_blank" data-i18n="btn_download">Descargar →</a>
                 <br />
-                <a href="https://maxstudiotoken.github.io/neon-messages-party/" target="_blank" style="font-size:0.85rem; color:#b0b0c8; background: none;" data-i18n="btn_web">Web oficial</a>
+                <a href="https://maxstudiotoken.github.io/neon-messages-party/" target="_blank" class="secondary-link" data-i18n="btn_web">Web oficial</a>
             </div>
         </div>
 

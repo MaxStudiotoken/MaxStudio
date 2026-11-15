@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MaxStudio | NFTs, Apps de Seguridad y Libros de Trading y Éxito</title>
-    <meta name="description" content="MaxStudio: arte NFT sin IA, apps de ciberseguridad (SecureMap, Malviora, VPNFree, WalletBank20), minería en la nube y libros sobre trading crypto, éxito financiero e historia NFT. Todo creado por MaxStudio." />
-    <meta name="keywords" content="MaxStudio, que es maxstudio, NFTs, Zip World NFT, OpenSea, SecureMap, Malviora, VPNFree, WalletBank20, ciberseguridad, apps gratis, libros trading crypto, éxito financiero, historia NFT, CMF Clean Master, EditVideoFree, NAC Note, Bank20 Mining, Bank 2.0, Traductor" />
+    <meta name="description" content="MaxStudio: arte NFT sin IA, apps de ciberseguridad (SecureMap, Malviora, VPNFree, WalletBank20), minería en la nube, chat privado y libros sobre trading crypto, éxito financiero e historia NFT. Todo creado por MaxStudio." />
+    <meta name="keywords" content="MaxStudio, que es maxstudio, NFTs, Zip World NFT, OpenSea, SecureMap, Malviora, VPNFree, WalletBank20, ciberseguridad, apps gratis, libros trading crypto, éxito financiero, historia NFT, CMF Clean Master, EditVideoFree, NAC Note, Bank20 Mining, Bank 2.0, Traductor, Private Chat" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://MaxStudiotoken.github.io/maxstudio/" />
 
@@ -93,7 +93,6 @@
         .card h3 { color: #ffffff; font-size: 1.5rem; margin-bottom: 12px; text-shadow: 0 0 15px rgba(108, 92, 231, 0.5); font-weight: 700; }
         .card p { color: #b0b0c8; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.5; flex-grow: 1; }
         
-        /* Estilo unificado para los botones de las tarjetas */
         .card a { color: #00d2ff; text-decoration: none; font-weight: 700; transition: 0.3s; word-break: break-all; display: inline-block; padding: 8px 16px; border-radius: 30px; background: rgba(0, 210, 255, 0.1); }
         .card a:hover { color: #000; background: #00d2ff; text-decoration: none; box-shadow: 0 0 20px rgba(0, 210, 255, 0.5); }
         .card a.secondary-link { background: transparent; color: #b0b0c8; font-size: 0.85rem; padding: 4px; margin-top: 5px; }
@@ -120,6 +119,12 @@
         .mining-logo { width: 140px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)); }
         .mining-title { color: #ffd700; font-size: 2.5rem; margin-bottom: 15px; text-shadow: 0 0 30px rgba(255, 215, 0, 0.4); font-weight: 800; }
 
+        /* Estilos específicos para la sección de Chat Privado */
+        .chat-section { background: linear-gradient(145deg, #1f1122, #0a0a12); padding: 40px; border-radius: 30px; border: 2px solid #ff6b6b; text-align: center; margin-top: 40px; box-shadow: 0 0 50px rgba(255, 107, 107, 0.15); position: relative; overflow: hidden; }
+        .chat-section::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(255, 107, 107, 0.05), transparent 70%); pointer-events: none; }
+        .chat-logo { width: 140px; height: 140px; object-fit: contain; border-radius: 30px; background: #1a1a2a; padding: 15px; border: 3px solid #ff6b6b; margin-bottom: 20px; animation: neonBorderGlow 5s ease-in-out infinite; }
+        .chat-title { color: #ff6b6b; font-size: 2.5rem; margin-bottom: 15px; text-shadow: 0 0 30px rgba(255, 107, 107, 0.4); font-weight: 800; }
+
         footer { margin-top: 80px; padding: 50px 20px; text-align: center; border-top: 2px solid #2a2a40; color: #666688; background: #050508; }
         footer a { color: #6c5ce7; text-decoration: none; font-weight: 600; }
         footer a:hover { color: #00d2ff; }
@@ -134,6 +139,8 @@
             .card-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
             .mining-section { padding: 25px; }
             .mining-title { font-size: 1.8rem; }
+            .chat-section { padding: 25px; }
+            .chat-title { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -184,7 +191,7 @@
             </p>
         </div>
 
-        <!-- SECCIÓN WALLET + MINERÍA (LO NUEVO) -->
+        <!-- SECCIÓN WALLET + MINERÍA -->
         <div class="section-title-wrap" style="margin-top: 80px;">
             <h2 class="section-title neon-title" data-i18n="section_wallet_mining">💎 Ecosistema Financiero</h2>
         </div>
@@ -251,6 +258,42 @@
                 💻 Ver Código en GitHub
             </a>
         </div>
+
+        <!-- NUEVA SECCIÓN: PRIVATE CHAT -->
+        <div class="section-title-wrap" style="margin-top: 80px;">
+            <h2 class="section-title neon-title" data-i18n="section_private_chat">🔒 Privacidad Extrema</h2>
+        </div>
+        
+        <div class="chat-section">
+            <span class="badge badge-new" style="position: absolute; top: 20px; right: 20px; font-size: 1rem; padding: 8px 20px; background: #ff6b6b; color: #fff;">¡NUEVO!</span>
+            
+            <img src="ChatPrivateLogo.png" alt="Private Chat Logo" class="chat-logo" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
+            <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:20px;">💬</div>
+            
+            <h2 class="chat-title" data-i18n="chat_title">Private Chat: Tu espacio seguro</h2>
+            
+            <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto 30px; color: #e0e0e0; line-height: 1.8;" data-i18n="chat_desc">
+                MaxStudio ha creado el chat definitivo para tus conversaciones más privadas. 
+                <strong>No dejes rastro de nada.</strong> Envía mensajes que se autodestruyen tras ser leídos, comparte fotos temporales que desaparecen al cerrarlas y realiza llamadas de voz seguras. 
+                Todo protegido con PIN y cifrado de extremo a extremo. Tu privacidad es lo primero.
+            </p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 30px;">
+                <span class="badge" style="background:rgba(255, 107, 107, 0.2); color:#ff6b6b; border: 1px solid #ff6b6b;">🔥 Mensajes que desaparecen</span>
+                <span class="badge" style="background:rgba(0, 210, 255, 0.2); color:#00d2ff; border: 1px solid #00d2ff;">🖼️ Fotos temporales</span>
+                <span class="badge" style="background:rgba(108, 92, 231, 0.2); color:#6c5ce7; border: 1px solid #6c5ce7;">🔐 PIN de seguridad</span>
+                <span class="badge" style="background:rgba(255, 215, 0, 0.2); color:#ffd700; border: 1px solid #ffd700;">🎙️ Llamadas de voz</span>
+            </div>
+
+            <a href="https://play.google.com/store/apps/details?id=vargas.maximo.privatechat" target="_blank" class="btn-neon" style="background: #ff6b6b; color: #fff; border-color: #ff8f8f; box-shadow: 0 0 40px rgba(255, 107, 107, 0.4);">
+                💬 Descargar Private Chat
+            </a>
+            <br />
+            <a href="https://maxstudiotoken.github.io/PRIVATE_CHAT_WEB/" target="_blank" style="font-size:0.95rem; color:#b0b0c8; display:inline-block; margin-top:20px; text-decoration: underline;" data-i18n="btn_web">
+                🌐 Web oficial de Private Chat
+            </a>
+        </div>
+
 
         <!-- SECCIÓN 1: COLECCIONES 100% SIN IA -->
         <div class="section-title-wrap" style="margin-top: 80px;">
@@ -547,6 +590,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> comenzó su andadura en <strong>2022</strong> con la creación de la colección <strong>Zip World NFT</strong> en <strong>Binance</strong>. <span class="highlight-pink">La colección Zip World NFT fue creada 100% a mano, sin inteligencia artificial.</span> Cada capítulo de sus cortos animados tiene un significado especial y un mensaje motivacional para mejorar aspectos de la vida.`,
                 intro_p2: `Ante las restricciones de Binance para creadores de NFTs, la comunidad migró a <strong>OpenSea</strong>, donde MaxStudio expandió su universo artístico con múltiples colecciones. Pero la evolución no se detuvo ahí: <span class="highlight-green">MaxStudio</span> sufrió un hackeo de criptomonedas que cambió su rumbo para siempre. Ese incidente lo llevó a estudiar ciberseguridad, phishing y vulnerabilidades de red para proteger a los demás. Hoy también comparte su conocimiento a través de libros sobre trading, éxito financiero y la historia de los NFT.`,
                 section_wallet_mining: "💎 Ecosistema Financiero",
+                section_private_chat: "🔒 Privacidad Extrema",
                 section_nft_manual: "🎨 Colecciones NFT (100% Arte sin IA)",
                 section_nft_ai: "🎨 Colecciones NFT (IA + Humano)",
                 section_cyber: "🛡️ Apps de Ciberseguridad (Gratuitas)",
@@ -557,6 +601,8 @@
                 wallet_desc: `La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro. <strong>Juega online con tus amigos, totalmente gratis</strong>, y olvídate de los hackers.`,
                 mining_title: "Bank 2.0: Minería en la Nube",
                 mining_desc: `MaxStudio, siempre mirando por el medio ambiente y la comodidad del usuario, ha creado esta revolucionaria app. <strong>Olvídate de dejar tu dispositivo encendido 24/7 y del consumo excesivo de luz.</strong> Con Bank 2.0, la minería se realiza directamente en la nube. Ahorra energía, cuida tu hardware y mina desde cualquier lugar.`,
+                chat_title: "Private Chat: Tu espacio seguro",
+                chat_desc: `MaxStudio ha creado el chat definitivo para tus conversaciones más privadas. <strong>No dejes rastro de nada.</strong> Envía mensajes que se autodestruyen tras ser leídos, comparte fotos temporales que desaparecen al cerrarlas y realiza llamadas de voz seguras. Todo protegido con PIN y cifrado de extremo a extremo. Tu privacidad es lo primero.`,
                 stats_label: "Descargas en Google Play",
                 section_other: "📱 Otras Apps y Herramientas",
                 other_desc: "Herramientas divertidas, útiles y profesionales para el día a día.",
@@ -585,6 +631,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> began its journey in <strong>2022</strong> with the creation of the <strong>Zip World NFT</strong> collection on <strong>Binance</strong>. <span class="highlight-pink">The Zip World NFT collection was created 100% by hand, without artificial intelligence.</span> Each chapter of its animated shorts has a special meaning and a motivational message to improve aspects of life.`,
                 intro_p2: `Faced with Binance's restrictions for NFT creators, the community migrated to <strong>OpenSea</strong>, where MaxStudio expanded its artistic universe with multiple collections. But evolution didn't stop there: <span class="highlight-green">MaxStudio</span> suffered a cryptocurrency hack that changed its course forever. This incident led it to study cybersecurity, phishing, and network vulnerabilities to protect others. Today it also shares its knowledge through books on trading, financial success, and the history of NFTs.`,
                 section_wallet_mining: "💎 Financial Ecosystem",
+                section_private_chat: "🔒 Extreme Privacy",
                 section_nft_manual: "🎨 NFT Collections (100% Art without AI)",
                 section_nft_ai: "🎨 NFT Collections (AI + Human)",
                 section_cyber: "🛡️ Cybersecurity Apps (Free)",
@@ -595,6 +642,8 @@
                 wallet_desc: `The <strong>only wallet</strong> with <span style="color:#00d2ff;">Anti-Phishing</span> and <span style="color:#ff6b6b;">Anti-2FA Attack</span> systems. Before you enter your data, the app activates and blocks entry if it detects danger. <strong>Play online with your friends, completely free</strong>, and forget about hackers.`,
                 mining_title: "Bank 2.0: Cloud Mining",
                 mining_desc: `MaxStudio, always looking out for the environment and user comfort, has created this revolutionary app. <strong>Forget about leaving your device on 24/7 and excessive electricity consumption.</strong> With Bank 2.0, mining is done directly in the cloud. Save energy, protect your hardware, and mine from anywhere.`,
+                chat_title: "Private Chat: Your safe space",
+                chat_desc: `MaxStudio has created the ultimate chat for your most private conversations. <strong>Leave no trace of anything.</strong> Send messages that self-destruct after being read, share temporary photos that disappear when closed, and make secure voice calls. All protected with a PIN and end-to-end encryption. Your privacy comes first.`,
                 stats_label: "Downloads on Google Play",
                 section_other: "📱 Other Apps & Tools",
                 other_desc: "Fun, useful, and professional tools for everyday life.",
@@ -623,6 +672,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> a débuté son parcours en <strong>2022</strong> avec la création de la collection <strong>Zip World NFT</strong> sur <strong>Binance</strong>. <span class="highlight-pink">La collection Zip World NFT a été créée 100% à la main, sans intelligence artificielle.</span> Chaque chapitre de ses courts métrages animés a une signification particulière et un message motivationnel pour améliorer des aspects de la vie.`,
                 intro_p2: `Face aux restrictions de Binance pour les créateurs de NFT, la communauté a migré vers <strong>OpenSea</strong>, où MaxStudio a élargi son univers artistique avec de multiples collections. Mais l'évolution ne s'est pas arrêtée là : <span class="highlight-green">MaxStudio</span> a subi un piratage de cryptomonnaies qui a changé son cap pour toujours. Cet incident l'a amené à étudier la cybersécurité, le phishing et les vulnérabilités réseau pour protéger les autres. Aujourd'hui, il partage également ses connaissances à travers des livres sur le trading, la réussite financière et l'histoire des NFT.`,
                 section_wallet_mining: "💎 Écosystème Financier",
+                section_private_chat: "🔒 Confidentialité Extrême",
                 section_nft_manual: "🎨 Collections NFT (100% Art sans IA)",
                 section_nft_ai: "🎨 Collections NFT (IA + Humain)",
                 section_cyber: "🛡️ Apps de Cybersécurité (Gratuites)",
@@ -633,6 +683,8 @@
                 wallet_desc: `Le <strong>seul portefeuille</strong> avec des systèmes <span style="color:#00d2ff;">Anti-Phishing</span> et <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Avant que vous saisissiez vos données, l'application s'active et bloque l'entrée si elle détecte un danger. <strong>Jouez en ligne avec vos amis, totalement gratuit</strong>, et oubliez les pirates.`,
                 mining_title: "Bank 2.0 : Cloud Mining",
                 mining_desc: `MaxStudio, toujours soucieux de l'environnement et du confort de l'utilisateur, a créé cette application révolutionnaire. <strong>Oubliez de laisser votre appareil allumé 24h/24 et 7j/7 et la consommation excessive d'électricité.</strong> Avec Bank 2.0, le minage se fait directement dans le cloud. Économisez de l'énergie, protégez votre matériel et minez de n'importe où.`,
+                chat_title: "Private Chat : Votre espace sécurisé",
+                chat_desc: `MaxStudio a créé le chat ultime pour vos conversations les plus privées. <strong>Ne laissez aucune trace.</strong> Envoyez des messages qui s'autodétruisent après lecture, partagez des photos temporaires qui disparaissent à la fermeture et passez des appels vocaux sécurisés. Le tout protégé par un code PIN et un cryptage de bout en bout. Votre vie privée passe avant tout.`,
                 stats_label: "Téléchargements sur Google Play",
                 section_other: "📱 Autres Apps et Outils",
                 other_desc: "Des outils amusants, utiles et professionnels pour la vie quotidienne.",
@@ -661,6 +713,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> ha iniziato il suo percorso nel <strong>2022</strong> con la creazione della collezione <strong>Zip World NFT</strong> su <strong>Binance</strong>. <span class="highlight-pink">La collezione Zip World NFT è stata creata 100% a mano, senza intelligenza artificiale.</span> Ogni capitolo dei suoi corti animati ha un significato speciale e un messaggio motivazionale per migliorare aspetti della vita.`,
                 intro_p2: `Di fronte alle restrizioni di Binance per i creatori di NFT, la comunità è migrata su <strong>OpenSea</strong>, dove MaxStudio ha ampliato il suo universo artistico con molteplici collezioni. Ma l'evoluzione non si è fermata qui: <span class="highlight-green">MaxStudio</span> ha subito un hack di criptovalute che ha cambiato per sempre la sua rotta. Questo incidente lo ha portato a studiare cybersecurity, phishing e vulnerabilità di rete per proteggere gli altri. Oggi condivide anche la sua conoscenza attraverso libri sul trading, il successo finanziario e la storia degli NFT.`,
                 section_wallet_mining: "💎 Ecosistema Finanziario",
+                section_private_chat: "🔒 Privacy Estrema",
                 section_nft_manual: "🎨 Collezioni NFT (100% Arte senza IA)",
                 section_nft_ai: "🎨 Collezioni NFT (IA + Umano)",
                 section_cyber: "🛡️ App di Cybersecurity (Gratuite)",
@@ -671,6 +724,8 @@
                 wallet_desc: `L'<strong>unico wallet</strong> con sistemi <span style="color:#00d2ff;">Anti-Phishing</span> e <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Prima che inserisci i tuoi dati, l'app si attiva e blocca l'ingresso se rileva un pericolo. <strong>Gioca online con i tuoi amici, completamente gratuito</strong>, e dimentica gli hacker.`,
                 mining_title: "Bank 2.0: Cloud Mining",
                 mining_desc: `MaxStudio, sempre attenta all'ambiente e al comfort dell'utente, ha creato questa app rivoluzionaria. <strong>Dimentica di lasciare il tuo dispositivo acceso 24/7 e il consumo eccessivo di elettricità.</strong> Con Bank 2.0, il mining viene eseguito direttamente nel cloud. Risparmia energia, proteggi il tuo hardware e mina da qualsiasi luogo.`,
+                chat_title: "Private Chat: Il tuo spazio sicuro",
+                chat_desc: `MaxStudio ha creato la chat definitiva per le tue conversazioni più private. <strong>Non lasciare traccia di nulla.</strong> Invia messaggi che si autodistruggono dopo la lettura, condividi foto temporanee che scompaiono alla chiusura ed effettua chiamate vocali sicure. Tutto protetto con PIN e crittografia end-to-end. La tua privacy viene prima di tutto.`,
                 stats_label: "Download su Google Play",
                 section_other: "📱 Altre App e Strumenti",
                 other_desc: "Strumenti divertenti, utili e professionali per la vita quotidiana.",
@@ -699,6 +754,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> 于 <strong>2022 年</strong> 起步，在 <strong>币安</strong> 上创建了 <strong>Zip World NFT</strong> 系列。 <span class="highlight-pink">Zip World NFT 系列是 100% 手工制作的，没有使用人工智能。</span> 其动画短片的每一章都有特殊含义和励志信息，以改善生活的各个方面。`,
                 intro_p2: `面对币安对 NFT 创作者的限制，社区迁移到了 <strong>OpenSea</strong>，MaxStudio 在那里通过多个系列扩展了其艺术世界。但发展并未止步：<span class="highlight-green">MaxStudio</span> 遭受了一次加密货币黑客攻击，这永远改变了它的方向。这一事件促使它研究网络安全、网络钓鱼和网络漏洞以保护他人。如今，它还通过有关交易、金融成功和 NFT 历史的书籍分享其知识。`,
                 section_wallet_mining: "💎 金融生态系统",
+                section_private_chat: "🔒 极致隐私",
                 section_nft_manual: "🎨 NFT 系列（100% 无 AI 艺术）",
                 section_nft_ai: "🎨 NFT 系列（AI + 人类）",
                 section_cyber: "🛡️ 网络安全应用（免费）",
@@ -709,6 +765,8 @@
                 wallet_desc: `具有 <span style="color:#00d2ff;">反网络钓鱼</span> 和 <span style="color:#ff6b6b;">反 2FA 攻击</span> 系统的 <strong>唯一钱包</strong>。在您输入数据之前，如果检测到危险，应用程序会激活并阻止进入。<strong>与您的朋友在线玩游戏，完全免费</strong>，并忘记黑客。`,
                 mining_title: "Bank 2.0：云挖矿",
                 mining_desc: `MaxStudio 始终关注环境和用户舒适度，创建了这款革命性的应用。<strong>忘记让您的设备 24/7 全天候开机以及过度的电力消耗。</strong> 使用 Bank 2.0，挖矿直接在云端进行。节省能源，保护您的硬件，随时随地挖矿。`,
+                chat_title: "Private Chat：您的安全空间",
+                chat_desc: `MaxStudio 为您最私密的对话创建了终极聊天工具。<strong>不留下任何痕迹。</strong> 发送阅读后即焚的消息，分享关闭即消失的临时照片，并进行安全的语音通话。一切均受 PIN 码和端到端加密保护。您的隐私是第一位的。`,
                 stats_label: "Google Play 下载量",
                 section_other: "📱 其他应用和工具",
                 other_desc: "适合日常生活的有趣、实用和专业工具。",
@@ -737,6 +795,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> начал свой путь в <strong>2022</strong> году с создания коллекции <strong>Zip World NFT</strong> на <strong>Binance</strong>. <span class="highlight-pink">Коллекция Zip World NFT была создана 100% вручную, без искусственного интеллекта.</span> Каждая глава его анимированных короткометражек имеет особое значение и мотивационное послание для улучшения аспектов жизни.`,
                 intro_p2: `Столкнувшись с ограничениями Binance для создателей NFT, сообщество мигрировало на <strong>OpenSea</strong>, где MaxStudio расширил свою художественную вселенную множеством коллекций. Но эволюция не остановилась на этом: <span class="highlight-green">MaxStudio</span> пережил взлом криптовалюты, который навсегда изменил его курс. Этот инцидент побудил его изучать кибербезопасность, фишинг и сетевые уязвимости для защиты других. Сегодня он также делится своими знаниями через книги о трейдинге, финансовом успехе и истории NFT.`,
                 section_wallet_mining: "💎 Финансовая экосистема",
+                section_private_chat: "🔒 Экстремальная конфиденциальность",
                 section_nft_manual: "🎨 Коллекции NFT (100% Искусство без ИИ)",
                 section_nft_ai: "🎨 Коллекции NFT (ИИ + Человек)",
                 section_cyber: "🛡️ Приложения кибербезопасности (Бесплатно)",
@@ -747,6 +806,8 @@
                 wallet_desc: `<strong>Единственный кошелек</strong> с системами <span style="color:#00d2ff;">Anti-Phishing</span> и <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Прежде чем вы введете свои данные, приложение активируется и блокирует вход, если обнаруживает опасность. <strong>Играйте онлайн с друзьями, совершенно бесплатно</strong>, и забудьте о хакерах.`,
                 mining_title: "Bank 2.0: Облачный майнинг",
                 mining_desc: `MaxStudio, всегда заботясь об окружающей среде и комфорте пользователей, создал это революционное приложение. <strong>Забудьте о том, чтобы оставлять устройство включенным 24/7, и о чрезмерном потреблении электроэнергии.</strong> С Bank 2.0 майнинг происходит прямо в облаке. Экономьте энергию, берегите свое оборудование и майните из любого места.`,
+                chat_title: "Private Chat: Ваше безопасное пространство",
+                chat_desc: `MaxStudio создал идеальный чат для ваших самых личных разговоров. <strong>Не оставляйте никаких следов.</strong> Отправляйте сообщения, которые самоуничтожаются после прочтения, делитесь временными фотографиями, которые исчезают при закрытии, и совершайте безопасные голосовые вызовы. Все защищено PIN-кодом и сквозным шифрованием. Ваша конфиденциальность превыше всего.`,
                 stats_label: "Загрузок в Google Play",
                 section_other: "📱 Другие приложения и инструменты",
                 other_desc: "Веселые, полезные и профессиональные инструменты для повседневной жизни.",
@@ -775,6 +836,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> begann seine Reise im Jahr <strong>2022</strong> mit der Erstellung der Kollektion <strong>Zip World NFT</strong> auf <strong>Binance</strong>. <span class="highlight-pink">Die Zip World NFT-Kollektion wurde 100% von Hand ohne künstliche Intelligenz erstellt.</span> Jedes Kapitel seiner animierten Kurzfilme hat eine besondere Bedeutung und eine motivierende Botschaft, um Aspekte des Lebens zu verbessern.`,
                 intro_p2: `Angesichts der Einschränkungen von Binance für NFT-Ersteller wanderte die Community zu <strong>OpenSea</strong> aus, wo MaxStudio sein künstlerisches Universum mit mehreren Kollektionen erweiterte. Aber die Entwicklung hörte hier nicht auf: <span class="highlight-green">MaxStudio</span> erlitt einen Kryptowährungs-Hack, der seinen Kurs für immer veränderte. Dieser Vorfall veranlasste es, Cybersicherheit, Phishing und Netzwerkschwachstellen zu studieren, um andere zu schützen. Heute teilt es sein Wissen auch durch Bücher über Trading, finanziellen Erfolg und die Geschichte der NFTs.`,
                 section_wallet_mining: "💎 Finanzielles Ökosystem",
+                section_private_chat: "🔒 Extreme Privatsphäre",
                 section_nft_manual: "🎨 NFT-Kollektionen (100% Kunst ohne KI)",
                 section_nft_ai: "🎨 NFT-Kollektionen (KI + Mensch)",
                 section_cyber: "🛡️ Cybersicherheits-Apps (Kostenlos)",
@@ -785,6 +847,8 @@
                 wallet_desc: `Die <strong>einzige Wallet</strong> mit <span style="color:#00d2ff;">Anti-Phishing</span>- und <span style="color:#ff6b6b;">Anti-2FA-Angriffs</span>-Systemen. Bevor Sie Ihre Daten eingeben, wird die App aktiv und blockiert den Zugang, wenn sie Gefahr erkennt. <strong>Spielen Sie online mit Ihren Freunden, völlig kostenlos</strong>, und vergessen Sie Hacker.`,
                 mining_title: "Bank 2.0: Cloud-Mining",
                 mining_desc: `MaxStudio, immer bedacht auf die Umwelt und den Komfort der Benutzer, hat diese revolutionäre App entwickelt. <strong>Vergessen Sie, Ihr Gerät 24/7 eingeschaltet zu lassen, und den übermäßigen Stromverbrauch.</strong> Mit Bank 2.0 findet das Mining direkt in der Cloud statt. Sparen Sie Energie, schonen Sie Ihre Hardware und minen Sie von überall aus.`,
+                chat_title: "Private Chat: Ihr sicherer Raum",
+                chat_desc: `MaxStudio hat den ultimativen Chat für Ihre privatesten Gespräche entwickelt. <strong>Hinterlassen Sie keine Spuren.</strong> Senden Sie Nachrichten, die sich nach dem Lesen selbst zerstören, teilen Sie temporäre Fotos, die beim Schließen verschwinden, und führen Sie sichere Sprachanrufe durch. Alles geschützt mit PIN und Ende-zu-Ende-Verschlüsselung. Ihre Privatsphäre steht an erster Stelle.`,
                 stats_label: "Downloads bei Google Play",
                 section_other: "📱 Andere Apps & Tools",
                 other_desc: "Unterhaltsame, nützliche und professionelle Tools für den Alltag.",
@@ -813,6 +877,7 @@
                 intro_p1: `<span class="highlight-green">MaxStudio</span> começou sua jornada em <strong>2022</strong> com a criação da coleção <strong>Zip World NFT</strong> na <strong>Binance</strong>. <span class="highlight-pink">A coleção Zip World NFT foi criada 100% à mão, sem inteligência artificial.</span> Cada capítulo de seus curtas animados tem um significado especial e uma mensagem motivacional para melhorar aspectos da vida.`,
                 intro_p2: `Diante das restrições da Binance para criadores de NFT, a comunidade migrou para o <strong>OpenSea</strong>, onde a MaxStudio expandiu seu universo artístico com múltiplas coleções. Mas a evolução não parou por aí: <span class="highlight-green">MaxStudio</span> sofreu um hack de criptomoedas que mudou seu rumo para sempre. Esse incidente o levou a estudar cibersegurança, phishing e vulnerabilidades de rede para proteger os outros. Hoje, também compartilha seu conhecimento por meio de livros sobre trading, sucesso financeiro e a história dos NFTs.`,
                 section_wallet_mining: "💎 Ecossistema Financeiro",
+                section_private_chat: "🔒 Privacidade Extrema",
                 section_nft_manual: "🎨 Coleções NFT (100% Arte sem IA)",
                 section_nft_ai: "🎨 Coleções NFT (IA + Humano)",
                 section_cyber: "🛡️ Apps de Cibersegurança (Gratuitas)",
@@ -823,6 +888,8 @@
                 wallet_desc: `A <strong>única wallet</strong> com sistemas <span style="color:#00d2ff;">Anti-Phishing</span> e <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Antes de você inserir seus dados, o app é ativado e bloqueia a entrada se detectar perigo. <strong>Jogue online com seus amigos, totalmente grátis</strong>, e esqueça os hackers.`,
                 mining_title: "Bank 2.0: Mineração em Nuvem",
                 mining_desc: `A MaxStudio, sempre pensando no meio ambiente e no conforto do usuário, criou este aplicativo revolucionário. <strong>Esqueça deixar seu dispositivo ligado 24 horas por dia e o consumo excessivo de energia.</strong> Com o Bank 2.0, a mineração é feita diretamente na nuvem. Economize energia, proteja seu hardware e minere de qualquer lugar.`,
+                chat_title: "Private Chat: Seu espaço seguro",
+                chat_desc: `A MaxStudio criou o chat definitivo para suas conversas mais privadas. <strong>Não deixe rastro de nada.</strong> Envie mensagens que se autodestroem após a leitura, compartilhe fotos temporárias que desaparecem ao fechar e faça chamadas de voz seguras. Tudo protegido com PIN e criptografia de ponta a ponta. Sua privacidade vem em primeiro lugar.`,
                 stats_label: "Downloads no Google Play",
                 section_other: "📱 Outros Apps e Ferramentas",
                 other_desc: "Ferramentas divertidas, úteis e profissionais para o dia a dia.",

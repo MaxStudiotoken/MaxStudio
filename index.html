@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MaxStudio | NFTs, Apps de Seguridad y Libros de Trading y Éxito</title>
     <meta name="description" content="MaxStudio: arte NFT sin IA, apps de ciberseguridad (SecureMap, Malviora, VPNFree, WalletBank20) y libros sobre trading crypto, éxito financiero e historia NFT. Todo creado por MaxStudio." />
-    <meta name="keywords" content="MaxStudio, que es maxstudio, NFTs, Zip World NFT, OpenSea, SecureMap, Malviora, VPNFree, WalletBank20, ciberseguridad, apps gratis, libros trading crypto, éxito financiero, historia NFT" />
+    <meta name="keywords" content="MaxStudio, que es maxstudio, NFTs, Zip World NFT, OpenSea, SecureMap, Malviora, VPNFree, WalletBank20, ciberseguridad, apps gratis, libros trading crypto, éxito financiero, historia NFT, CMF Clean Master, EditVideoFree, NAC Note, Bank20 Mining" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://MaxStudiotoken.github.io/maxstudio/" />
 
@@ -14,19 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', Arial, sans-serif;
-            background-color: #0a0a12;
-            color: #e0e0e0;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', Arial, sans-serif; background-color: #0a0a12; color: #e0e0e0; line-height: 1.6; overflow-x: hidden; }
 
         /* ---- NEON ANIMATIONS ---- */
         @keyframes neonGlowText {
@@ -36,194 +25,72 @@
             75% { text-shadow: 0 0 8px #ffd700, 0 0 20px #ffd700, 0 0 40px #00d2ff; }
             100% { text-shadow: 0 0 8px #6c5ce7, 0 0 20px #6c5ce7, 0 0 40px #00d2ff; }
         }
-
         @keyframes neonBorderGlow {
             0% { border-color: #6c5ce7; box-shadow: 0 0 15px rgba(108, 92, 231, 0.3), inset 0 0 15px rgba(108, 92, 231, 0.05); }
             33% { border-color: #00d2ff; box-shadow: 0 0 25px rgba(0, 210, 255, 0.4), inset 0 0 20px rgba(0, 210, 255, 0.05); }
             66% { border-color: #ff6b6b; box-shadow: 0 0 25px rgba(255, 107, 107, 0.4), inset 0 0 20px rgba(255, 107, 107, 0.05); }
             100% { border-color: #6c5ce7; box-shadow: 0 0 15px rgba(108, 92, 231, 0.3), inset 0 0 15px rgba(108, 92, 231, 0.05); }
         }
-
         @keyframes neonPulseBg {
             0% { background: radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.15), transparent 70%); }
             33% { background: radial-gradient(circle at 80% 70%, rgba(0, 210, 255, 0.15), transparent 70%); }
             66% { background: radial-gradient(circle at 40% 80%, rgba(255, 107, 107, 0.15), transparent 70%); }
             100% { background: radial-gradient(circle at 20% 30%, rgba(108, 92, 231, 0.15), transparent 70%); }
         }
-
-        .neon-title { animation: neonGlowText 4s ease-in-out infinite; }
-        .neon-border { animation: neonBorderGlow 5s ease-in-out infinite; }
-
-        .hero {
-            background: #0a0a12;
-            padding: 60px 20px 80px 20px;
-            text-align: center;
-            border-bottom: 3px solid #6c5ce7;
-            position: relative;
-            overflow: hidden;
-            animation: neonPulseBg 8s ease-in-out infinite;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle at center, rgba(108, 92, 231, 0.08), transparent 70%);
-            animation: pulseGlow 8s ease-in-out infinite;
-        }
-
         @keyframes pulseGlow {
             0%, 100% { transform: scale(1); opacity: 0.4; }
             50% { transform: scale(1.2); opacity: 0.9; }
         }
-
-        .hero-logo-wrapper {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .hero-logo {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #6c5ce7;
-            box-shadow: 0 0 40px rgba(108, 92, 231, 0.5);
-            animation: neonBorderGlow 5s ease-in-out infinite;
-            background: #0a0a12;
-            padding: 6px;
-        }
-
-        .hero h1 {
-            font-size: 4.8rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, #00d2ff, #6c5ce7, #ff6b6b, #ffd700);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientMove 6s ease-in-out infinite;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 1;
-        }
-
         @keyframes gradientMove {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        .hero .subtitle {
-            font-size: 1.6rem; color: #c0c0e0; font-weight: 400; position: relative; z-index: 1;
-            max-width: 700px; margin: 0 auto 10px; text-shadow: 0 0 20px rgba(108, 92, 231, 0.3);
-        }
+        .neon-title { animation: neonGlowText 4s ease-in-out infinite; }
+        .neon-border { animation: neonBorderGlow 5s ease-in-out infinite; }
 
-        .hero .tagline {
-            font-size: 1.15rem; color: #b0b0d0; position: relative; z-index: 1; margin-top: 15px;
-            background: rgba(108, 92, 231, 0.12); padding: 10px 30px; border-radius: 50px;
-            display: inline-block; backdrop-filter: blur(6px); border: 1px solid rgba(108, 92, 231, 0.4);
-            animation: neonBorderGlow 5s ease-in-out infinite;
-        }
+        .hero { background: #0a0a12; padding: 60px 20px 80px 20px; text-align: center; border-bottom: 3px solid #6c5ce7; position: relative; overflow: hidden; animation: neonPulseBg 8s ease-in-out infinite; }
+        .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(108, 92, 231, 0.08), transparent 70%); animation: pulseGlow 8s ease-in-out infinite; }
+        .hero-logo-wrapper { position: relative; z-index: 1; display: flex; justify-content: center; margin-bottom: 20px; }
+        .hero-logo { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #6c5ce7; box-shadow: 0 0 40px rgba(108, 92, 231, 0.5); animation: neonBorderGlow 5s ease-in-out infinite; background: #0a0a12; padding: 6px; }
+        .hero h1 { font-size: 4.8rem; font-weight: 800; background: linear-gradient(90deg, #00d2ff, #6c5ce7, #ff6b6b, #ffd700); background-size: 300% 100%; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: gradientMove 6s ease-in-out infinite; margin-bottom: 10px; position: relative; z-index: 1; }
+        .hero .subtitle { font-size: 1.6rem; color: #c0c0e0; font-weight: 400; position: relative; z-index: 1; max-width: 700px; margin: 0 auto 10px; text-shadow: 0 0 20px rgba(108, 92, 231, 0.3); }
+        .hero .tagline { font-size: 1.15rem; color: #b0b0d0; position: relative; z-index: 1; margin-top: 15px; background: rgba(108, 92, 231, 0.12); padding: 10px 30px; border-radius: 50px; display: inline-block; backdrop-filter: blur(6px); border: 1px solid rgba(108, 92, 231, 0.4); animation: neonBorderGlow 5s ease-in-out infinite; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-        .lang-switcher {
-            position: sticky; top: 0; z-index: 1000; background: rgba(10, 10, 18, 0.92);
-            backdrop-filter: blur(12px); border-bottom: 1px solid #2a2a40; padding: 10px 20px;
-            display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 16px;
-        }
-
-        .lang-switcher span {
-            cursor: pointer; font-size: 1.05rem; padding: 4px 12px; border-radius: 30px;
-            transition: 0.3s; color: #8888aa; font-weight: 600; letter-spacing: 0.5px;
-        }
-
+        .lang-switcher { position: sticky; top: 0; z-index: 1000; background: rgba(10, 10, 18, 0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #2a2a40; padding: 10px 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 16px; }
+        .lang-switcher span { cursor: pointer; font-size: 1.05rem; padding: 4px 12px; border-radius: 30px; transition: 0.3s; color: #8888aa; font-weight: 600; letter-spacing: 0.5px; }
         .lang-switcher span:hover { background: rgba(108, 92, 231, 0.2); color: #ffffff; }
         .lang-switcher span.active { background: #6c5ce7; color: #ffffff; box-shadow: 0 0 20px rgba(108, 92, 231, 0.5); }
         .lang-switcher .flag { margin-right: 4px; }
 
-        .section-title {
-            font-size: 2.6rem; font-weight: 700; margin: 60px 0 30px 0; text-align: center;
-            color: #ffffff; padding-bottom: 15px; display: inline-block; width: auto;
-            border-bottom: 4px solid transparent; animation: neonBorderGlow 5s ease-in-out infinite;
-        }
-
+        .section-title { font-size: 2.6rem; font-weight: 700; margin: 60px 0 30px 0; text-align: center; color: #ffffff; padding-bottom: 15px; display: inline-block; width: auto; border-bottom: 4px solid transparent; animation: neonBorderGlow 5s ease-in-out infinite; }
         .section-title-wrap { text-align: center; }
 
-        .card-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px; margin-top: 30px;
-        }
-
-        .card {
-            background: #14141f; padding: 25px 15px; border-radius: 24px;
-            border: 2px solid #6c5ce7; transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-            display: flex; flex-direction: column; align-items: center; text-align: center;
-            animation: neonBorderGlow 6s ease-in-out infinite;
-        }
-
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-top: 30px; }
+        .card { background: #14141f; padding: 25px 15px; border-radius: 24px; border: 2px solid #6c5ce7; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); display: flex; flex-direction: column; align-items: center; text-align: center; animation: neonBorderGlow 6s ease-in-out infinite; }
         .card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(108, 92, 231, 0.25); }
-
-        .card img {
-            width: 150px; height: 150px; object-fit: contain; border-radius: 16px;
-            margin-bottom: 15px; background: #1a1a2a; padding: 8px;
-            border: 2px solid #2a2a40; transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
+        .card img { width: 150px; height: 150px; object-fit: contain; border-radius: 16px; margin-bottom: 15px; background: #1a1a2a; padding: 8px; border: 2px solid #2a2a40; transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .card img:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(108, 92, 231, 0.3); }
-
         .card h3 { color: #6c5ce7; font-size: 1.4rem; margin-bottom: 10px; text-shadow: 0 0 15px rgba(108, 92, 231, 0.3); }
         .card p { color: #b0b0c8; margin-bottom: 12px; font-size: 0.95rem; }
         .card a { color: #00d2ff; text-decoration: none; font-weight: 600; transition: 0.3s; word-break: break-all; }
         .card a:hover { color: #ffffff; text-decoration: underline; }
 
-        .badge {
-            display: inline-block; background: #6c5ce7; color: white; padding: 5px 15px;
-            border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-top: 10px;
-            box-shadow: 0 0 15px rgba(108, 92, 231, 0.3);
-        }
-
+        .badge { display: inline-block; background: #6c5ce7; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; margin-top: 10px; box-shadow: 0 0 15px rgba(108, 92, 231, 0.3); }
         .highlight-green { color: #00d2ff; font-weight: 700; }
         .highlight-pink { color: #ff6b6b; font-weight: 700; }
 
-        .stats-box {
-            background: linear-gradient(145deg, #1a1a30, #0d0d1a);
-            border: 2px solid #00d2ff; border-radius: 24px; padding: 30px 40px;
-            text-align: center; margin: 40px 0; box-shadow: 0 0 50px rgba(0, 210, 255, 0.08);
-            animation: neonBorderGlow 5s ease-in-out infinite;
-        }
-
+        .stats-box { background: linear-gradient(145deg, #1a1a30, #0d0d1a); border: 2px solid #00d2ff; border-radius: 24px; padding: 30px 40px; text-align: center; margin: 40px 0; box-shadow: 0 0 50px rgba(0, 210, 255, 0.08); animation: neonBorderGlow 5s ease-in-out infinite; }
         .stats-box .number { font-size: 4.2rem; font-weight: 800; color: #00d2ff; display: block; text-shadow: 0 0 30px rgba(0, 210, 255, 0.4); }
         .stats-box .label { font-size: 1.2rem; color: #b0b0d0; }
 
-        .wallet-logo {
-            width: 140px; height: 140px; object-fit: contain; border-radius: 30px;
-            background: #1a1a2a; padding: 16px; border: 3px solid #6c5ce7; margin-bottom: 20px;
-            animation: neonBorderGlow 5s ease-in-out infinite;
-        }
-
-        .intro-box {
-            background: #0f0f1a; padding: 30px; border-radius: 24px;
-            border: 2px solid #2a2a40; margin-bottom: 40px;
-            animation: neonBorderGlow 6s ease-in-out infinite;
-        }
-
+        .wallet-logo { width: 140px; height: 140px; object-fit: contain; border-radius: 30px; background: #1a1a2a; padding: 16px; border: 3px solid #6c5ce7; margin-bottom: 20px; animation: neonBorderGlow 5s ease-in-out infinite; }
+        .intro-box { background: #0f0f1a; padding: 30px; border-radius: 24px; border: 2px solid #2a2a40; margin-bottom: 40px; animation: neonBorderGlow 6s ease-in-out infinite; }
         .intro-box p { font-size: 1.2rem; line-height: 1.8; }
-
-        .btn-neon {
-            display: inline-block; background: #6c5ce7; color: white; padding: 14px 40px;
-            border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.1rem;
-            margin-top: 15px; transition: 0.3s; border: 2px solid #8a7cec;
-            box-shadow: 0 0 30px rgba(108, 92, 231, 0.3);
-            animation: neonBorderGlow 4s ease-in-out infinite;
-        }
-
+        .btn-neon { display: inline-block; background: #6c5ce7; color: white; padding: 14px 40px; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.1rem; margin-top: 15px; transition: 0.3s; border: 2px solid #8a7cec; box-shadow: 0 0 30px rgba(108, 92, 231, 0.3); animation: neonBorderGlow 4s ease-in-out infinite; }
         .btn-neon:hover { background: #7b6df0; transform: scale(1.04); box-shadow: 0 0 50px rgba(108, 92, 231, 0.5); }
 
         footer { margin-top: 60px; padding: 40px 20px; text-align: center; border-top: 2px solid #2a2a40; color: #666688; }
@@ -256,7 +123,6 @@
     <section class="hero">
         <div class="container">
             <div class="hero-logo-wrapper">
-                <!-- CORREGIDO: maxudio.png (sin la 's' intermedia) -->
                 <img src="maxsudio.png" alt="MaxStudio Logo" class="hero-logo" />
             </div>
             <h1>MS MaxStudio</h1>
@@ -294,14 +160,11 @@
         </div>
 
         <div class="card-grid">
-            <!-- Cortos Animados (YouTube) -->
             <div class="card">
                 <img src="youtube_log.png" alt="YouTube" style="width:150px; height:150px; object-fit:contain; border-radius:16px; border:3px solid #ff0000; padding:0px; background: transparent;" />
                 <h3>📺 Cortos Animados</h3>
                 <a href="https://www.youtube.com/channel/UC3ThxzYXtBANS7uNK-21bPQ" target="_blank" style="color:#ff0000;">YouTube Channel →</a>
             </div>
-
-            <!-- Zip World NFT -->
             <div class="card">
                 <img src="zipworldnft.png" alt="Zip World NFT" class="nft-cover" />
                 <h3>🔹 Zip World NFT</h3>
@@ -316,70 +179,51 @@
         </div>
 
         <div class="card-grid">
-            <!-- Perfil OpenSea: también corregido a maxudio.png -->
             <div class="card">
                 <img src="maxsudio.png" alt="MaxStudio OpenSea" style="width:150px; height:150px; object-fit:contain; border-radius:16px; border:3px solid #6c5ce7; padding:4px;" />
                 <h3>🖼️ Perfil OpenSea</h3>
                 <a href="https://opensea.io/BANK20/created" target="_blank" style="color:#00d2ff;">Ver todas las creaciones →</a>
             </div>
-
-            <!-- Crypto Gods -->
             <div class="card">
                 <img src="Crypto_Gods_Collection.png" alt="Crypto Gods" class="nft-cover" />
                 <h3>🪙 Crypto Gods</h3>
                 <a href="https://opensea.io/collection/crypto-gods-collection-1" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- CyberGuardians -->
             <div class="card">
                 <img src="CyberGuardians.png" alt="CyberGuardians" class="nft-cover" />
                 <h3>🤖 CyberGuardians</h3>
                 <a href="https://opensea.io/collection/cyberguardians" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- History Crypto -->
             <div class="card">
                 <img src="history-crypto-currency-collection.png" alt="History Crypto" class="nft-cover" />
                 <h3>📜 History Crypto</h3>
                 <a href="https://opensea.io/collection/history-crypto-currency-collection" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- Classic Motorcycles NFT -->
             <div class="card">
                 <img src="moto_nft.png" alt="Classic Motorcycles" class="nft-cover" />
                 <h3>📜 Classic Motorcycles</h3>
                 <a href="https://opensea.io/collection/classic-motorcycles-nft" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- Classic Cars NFT -->
             <div class="card">
                 <img src="coche_nft.png" alt="ClassicCars" class="nft-cover" />
                 <h3>📜 Classic Cars</h3>
                 <a href="https://opensea.io/collection/classic-cars-11" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- Elite Strength Pixel -->
             <div class="card">
                 <img src="Elite.png" alt="Elite Strength Pixel" class="nft-cover" />
                 <h3>📜 Elite Strength Pixel</h3>
                 <a href="https://opensea.io/collection/elite-strength-pixel" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- Police Vehicles NFT -->
             <div class="card">
                 <img src="police.png" alt="Police Vehicles NFT" class="nft-cover" />
                 <h3>📜 Police Vehicles NFT</h3>
                 <a href="https://opensea.io/collection/police-vehicles-nft" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- World War I Vehicles -->
             <div class="card">
                 <img src="World_War_I.png" alt="WWI Vehicles" class="nft-cover" />
                 <h3>⚔️ WWI Vehicles</h3>
                 <a href="https://opensea.io/collection/world-war-i-military-vehicles" target="_blank" data-i18n="btn_explore">Explorar colección →</a>
             </div>
-
-            <!-- World War II Vehicles -->
             <div class="card">
                 <img src="World_War_II.png" alt="WWII Vehicles" class="nft-cover" />
                 <h3>⚔️ WWII Vehicles</h3>
@@ -421,45 +265,73 @@
         </div>
 
         <!-- WALLET ESTRELLA -->
-<div style="margin-top: 50px;">
-    <div class="stats-box">
-        <span class="number">8.000+</span>
-        <span class="label" data-i18n="stats_label">Descargas en Google Play</span>
-    </div>
+        <div style="margin-top: 50px;">
+            <div class="stats-box">
+                <span class="number">8.000+</span>
+                <span class="label" data-i18n="stats_label">Descargas en Google Play</span>
+            </div>
 
-    <div style="background: linear-gradient(145deg, #1a1a30, #111122); padding: 40px; border-radius: 30px; border: 3px solid #6c5ce7; text-align: center; animation: neonBorderGlow 5s ease-in-out infinite;">
-        <img src="bank20solana.png" alt="WalletBank20" class="wallet-logo" />
-        <h2 style="color: #ffffff; font-size: 2.8rem; margin-bottom: 15px; text-shadow: 0 0 30px rgba(108,92,231,0.3);">💎 WalletBank20</h2>
-        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; color: #c0c0d0;" data-i18n="wallet_desc">
-            La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>.
-            Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro.
-            <strong>Juega online con tus amigos, totalmente gratis</strong>, y olvídate de los hackers.
-        </p>
-        <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
-            <span class="badge" style="background:#00d2ff; color:#000;">🛡️ Anti-Phishing</span>
-            <span class="badge" style="background:#ff6b6b; color:#000;">⚡ Anti-2FA Attack</span>
-            <span class="badge" style="background:#6c5ce7; color:#fff;">🎮 Juegos P2P</span>
-            <span class="badge" style="background:#ffd700; color:#000;">💰 Token Propio</span>
+            <div style="background: linear-gradient(145deg, #1a1a30, #111122); padding: 40px; border-radius: 30px; border: 3px solid #6c5ce7; text-align: center; animation: neonBorderGlow 5s ease-in-out infinite;">
+                <img src="bank20solana.png" alt="WalletBank20" class="wallet-logo" />
+                <h2 style="color: #ffffff; font-size: 2.8rem; margin-bottom: 15px; text-shadow: 0 0 30px rgba(108,92,231,0.3);">💎 WalletBank20</h2>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 20px; color: #c0c0d0;" data-i18n="wallet_desc">
+                    La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>.
+                    Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro.
+                    <strong>Juega online con tus amigos, totalmente gratis</strong>, y olvídate de los hackers.
+                </p>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+                    <span class="badge" style="background:#00d2ff; color:#000;">🛡️ Anti-Phishing</span>
+                    <span class="badge" style="background:#ff6b6b; color:#000;">⚡ Anti-2FA Attack</span>
+                    <span class="badge" style="background:#6c5ce7; color:#fff;">🎮 Juegos P2P</span>
+                    <span class="badge" style="background:#ffd700; color:#000;">💰 Token Propio</span>
+                </div>
+                <br />
+                <a href="https://play.google.com/store/apps/details?id=vargas.maximo.walletbank20" target="_blank" class="btn-neon" data-i18n="btn_download">
+                    📲 Descargar WalletBank20
+                </a>
+                <br />
+                <a href="https://maxstudiotoken.github.io/bank20.github.io/#" target="_blank" style="font-size:0.85rem; color:#b0b0c8; display:inline-block; margin-top:10px;" data-i18n="btn_web">
+                    🌐 Web oficial
+                </a>
+                <br />
+                <a href="https://github.com/MaxStudiotoken/bank20-mining" target="_blank" style="font-size:0.85rem; color:#b0b0c8; display:inline-block; margin-top:5px;">
+                    ⛏️ Repositorio de Minería (GitHub)
+                </a>
+            </div>
         </div>
-        <br />
-        <a href="https://play.google.com/store/apps/details?id=vargas.maximo.walletbank20" target="_blank" class="btn-neon" data-i18n="btn_download">
-            📲 Descargar WalletBank20
-        </a>
-        <!-- 👇 NUEVO ENLACE WEB OFICIAL -->
-        <br />
-        <a href="https://maxstudiotoken.github.io/bank20.github.io/#" target="_blank" style="font-size:0.85rem; color:#b0b0c8; display:inline-block; margin-top:10px;" data-i18n="btn_web">
-            🌐 Web oficial
-        </a>
-    </div>
-</div>
 
-        <!-- OTRAS APPS -->
+        <!-- OTRAS APPS (ACTUALIZADO CON NUEVAS HERRAMIENTAS) -->
         <div class="section-title-wrap" style="margin-top: 60px;">
-            <h2 class="section-title neon-title" data-i18n="section_other">📱 Otras Apps de MaxStudio</h2>
+            <h2 class="section-title neon-title" data-i18n="section_other">📱 Otras Apps y Herramientas de MaxStudio</h2>
         </div>
-        <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="other_desc">Herramientas divertidas y útiles para el día a día.</p>
+        <p style="text-align:center; color:#8888aa; margin-bottom:30px;" data-i18n="other_desc">Herramientas divertidas, útiles y profesionales para el día a día.</p>
 
         <div class="card-grid">
+            <!-- CMF Clean Master Free -->
+            <div class="card">
+                <div style="font-size:4rem; margin-bottom:15px; background: #1a1a2a; padding: 15px; border-radius: 16px; border: 2px solid #2a2a40; width:150px; height:150px; display:flex; align-items:center; justify-content:center;">🧹</div>
+                <h3>CMF Clean Master</h3>
+                <p>Monitorización y limpieza de almacenamiento. Libera espacio fácilmente.</p>
+                <a href="https://maxstudiotoken.github.io/CMF-Clean-Master-Free/" target="_blank" data-i18n="btn_web">Web oficial →</a>
+            </div>
+
+            <!-- EditVideoFree -->
+            <div class="card">
+                <div style="font-size:4rem; margin-bottom:15px; background: #1a1a2a; padding: 15px; border-radius: 16px; border: 2px solid #2a2a40; width:150px; height:150px; display:flex; align-items:center; justify-content:center;">✂️</div>
+                <h3>EditVideoFree</h3>
+                <p>Edita tus vídeos de forma rápida y gratuita directamente desde el navegador.</p>
+                <a href="https://maxstudiotoken.github.io/EditVideoFree/" target="_blank" data-i18n="btn_web">Web oficial →</a>
+            </div>
+
+            <!-- NAC Note -->
+            <div class="card">
+                <div style="font-size:4rem; margin-bottom:15px; background: #1a1a2a; padding: 15px; border-radius: 16px; border: 2px solid #2a2a40; width:150px; height:150px; display:flex; align-items:center; justify-content:center;">📝</div>
+                <h3>NAC Note</h3>
+                <p>Alarma y contabilidad. Mantén tus finanzas y recordatorios bajo control.</p>
+                <a href="https://maxstudiotoken.github.io/NAC-NOTE-ALARMA-CONTABILIDAD_WEB/" target="_blank" data-i18n="btn_web">Web oficial →</a>
+            </div>
+
+            <!-- Hot Wheels Scanner -->
             <div class="card">
                 <img src="hotwheels_scanner.png" alt="Hot Wheels Scanner" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">🏎️</div>
@@ -469,6 +341,8 @@
                 <br />
                 <a href="https://maxstudiotoken.github.io/hotwheels-scanner/" target="_blank" style="font-size:0.85rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
+
+            <!-- Pokémon Scanner -->
             <div class="card">
                 <img src="pokemon_scanner.png" alt="Pokémon Scanner" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">⚡</div>
@@ -479,33 +353,34 @@
                 <a href="https://maxstudiotoken.github.io/pokemon-card-scanner-2026/" target="_blank" style="font-size:0.85rem; color:#b0b0c8;" data-i18n="btn_web">Web oficial</a>
             </div>
 
+            <!-- SecureVault -->
             <div class="card">
                 <img src="generador.png" alt="SecureVault: Generador Claves" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">⚡</div>
                 <h3>⚡ SecureVault: Generador Claves</h3>
                 <p data-i18n="generador_desc">Guardas tus Claves en una bodega segura.</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.securevault&pli=1" target="_blank" data-i18n="btn_download">Descargar →</a>
-                <br />
             </div>
 
+            <!-- GoldSilverTracker -->
             <div class="card">
                 <img src="alert.png" alt="GoldSilverTracker Alert" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">⚡</div>
                 <h3>⚡ GoldSilverTracker Alert</h3>
                 <p data-i18n="GoldSilverTracker_desc">Estate en alerta sobre los precios mas importantes: Oro, Plata; Bitcoin, Metales raros y mucho mas .</p>
                 <a href="https://play.google.com/store/apps/details?id=vargas.maximo.goldsilvertracker" target="_blank" data-i18n="btn_download">Descargar →</a>
-                <br />
             </div>
 
-<div class="card">
+            <!-- Miner Monero -->
+            <div class="card">
                 <img src="logo_monero.png" alt="Miner Monero App" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">⚡</div>
                 <h3>⚡ Miner Monero App</h3>
                 <p data-i18n="Monero_desc">Mineria de XMR (Monero) es muy facil y no utiliza muchos recursos... .</p>
                 <a href="https://maxstudiotoken.github.io/monero-miner-dashboard/#" target="_blank" data-i18n="btn_download">Descargar →</a>
-                <br />
             </div>
             
+            <!-- Neon Messages -->
             <div class="card">
                 <img src="neon.png" alt="Neon Messages" class="app-icon" onerror="this.style.display='none'; this.parentElement.querySelector('.app-fallback').style.display='flex';" />
                 <div class="app-fallback" style="display:none; font-size:4rem; margin-bottom:10px;">💡</div>
@@ -584,8 +459,8 @@
                 vpnfree_desc: "Navega por la web de forma anónima y segura.",
                 wallet_desc: `La <strong>única wallet</strong> con sistema <span style="color:#00d2ff;">Anti-Phishing</span> y <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Antes de que introduzcas tus datos, la app se activa y te bloquea la entrada si detecta peligro. <strong>Juega online con tus amigos, totalmente gratis</strong>, y olvídate de los hackers.`,
                 stats_label: "Descargas en Google Play",
-                section_other: "📱 Otras Apps de MaxStudio",
-                other_desc: "Herramientas divertidas y útiles para el día a día.",
+                section_other: "📱 Otras Apps y Herramientas de MaxStudio",
+                other_desc: "Herramientas divertidas, útiles y profesionales para el día a día.",
                 hotwheels_desc: "Escanea tus coches Hot Wheels y descubre información, rarezas y mucho más.",
                 pokemon_desc: "Escanea tus cartas Pokémon y obtén información, valores y datos de cada carta.",
                 generador_desc: "Guarda tus claves de forma segura en una bóveda protegida.",
@@ -619,8 +494,8 @@
                 vpnfree_desc: "Browse the web anonymously and securely.",
                 wallet_desc: `The <strong>only wallet</strong> with <span style="color:#00d2ff;">Anti-Phishing</span> and <span style="color:#ff6b6b;">Anti-2FA Attack</span> systems. Before you enter your data, the app activates and blocks entry if it detects danger. <strong>Play online with your friends, completely free</strong>, and forget about hackers.`,
                 stats_label: "Downloads on Google Play",
-                section_other: "📱 Other MaxStudio Apps",
-                other_desc: "Fun and useful tools for everyday life.",
+                section_other: "📱 Other MaxStudio Apps & Tools",
+                other_desc: "Fun, useful, and professional tools for everyday life.",
                 hotwheels_desc: "Scan your Hot Wheels cars and discover information, rarities, and much more.",
                 pokemon_desc: "Scan your Pokémon cards and get information, values, and data for each card.",
                 generador_desc: "Safely store your passwords in a protected vault.",
@@ -654,8 +529,8 @@
                 vpnfree_desc: "Naviguez sur le Web de manière anonyme et sécurisée.",
                 wallet_desc: `Le <strong>seul portefeuille</strong> avec des systèmes <span style="color:#00d2ff;">Anti-Phishing</span> et <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Avant que vous saisissiez vos données, l'application s'active et bloque l'entrée si elle détecte un danger. <strong>Jouez en ligne avec vos amis, totalement gratuit</strong>, et oubliez les pirates.`,
                 stats_label: "Téléchargements sur Google Play",
-                section_other: "📱 Autres Apps de MaxStudio",
-                other_desc: "Des outils amusants et utiles pour la vie quotidienne.",
+                section_other: "📱 Autres Apps et Outils de MaxStudio",
+                other_desc: "Des outils amusants, utiles et professionnels pour la vie quotidienne.",
                 hotwheels_desc: "Scannez vos voitures Hot Wheels et découvrez des informations, des raretés et bien plus encore.",
                 pokemon_desc: "Scannez vos cartes Pokémon et obtenez des informations, des valeurs et des données pour chaque carte.",
                 generador_desc: "Stockez vos mots de passe en toute sécurité dans un coffre-fort protégé.",
@@ -689,8 +564,8 @@
                 vpnfree_desc: "Naviga sul web in modo anonimo e sicuro.",
                 wallet_desc: `L'<strong>unico wallet</strong> con sistemi <span style="color:#00d2ff;">Anti-Phishing</span> e <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Prima che inserisci i tuoi dati, l'app si attiva e blocca l'ingresso se rileva un pericolo. <strong>Gioca online con i tuoi amici, completamente gratuito</strong>, e dimentica gli hacker.`,
                 stats_label: "Download su Google Play",
-                section_other: "📱 Altre App di MaxStudio",
-                other_desc: "Strumenti divertenti e utili per la vita quotidiana.",
+                section_other: "📱 Altre App e Strumenti di MaxStudio",
+                other_desc: "Strumenti divertenti, utili e professionali per la vita quotidiana.",
                 hotwheels_desc: "Scansiona le tue auto Hot Wheels e scopri informazioni, rarità e molto altro.",
                 pokemon_desc: "Scansiona le tue carte Pokémon e ottieni informazioni, valori e dati per ogni carta.",
                 generador_desc: "Conserva le tue password in modo sicuro in una cassaforte protetta.",
@@ -724,8 +599,8 @@
                 vpnfree_desc: "匿名安全地浏览网页。",
                 wallet_desc: `具有 <span style="color:#00d2ff;">反网络钓鱼</span> 和 <span style="color:#ff6b6b;">反 2FA 攻击</span> 系统的 <strong>唯一钱包</strong>。在您输入数据之前，如果检测到危险，应用程序会激活并阻止进入。<strong>与您的朋友在线玩游戏，完全免费</strong>，并忘记黑客。`,
                 stats_label: "Google Play 下载量",
-                section_other: "📱 MaxStudio 的其他应用",
-                other_desc: "适合日常生活的有趣实用工具。",
+                section_other: "📱 MaxStudio 的其他应用和工具",
+                other_desc: "适合日常生活的有趣、实用和专业工具。",
                 hotwheels_desc: "扫描您的 Hot Wheels 汽车，发现信息、稀有物品等。",
                 pokemon_desc: "扫描您的 Pokémon 卡，获取每张卡的信息、价值和数据。",
                 generador_desc: "将您的密码安全地存储在受保护的保险库中。",
@@ -759,8 +634,8 @@
                 vpnfree_desc: "Путешествуйте по сети анонимно и безопасно.",
                 wallet_desc: `<strong>Единственный кошелек</strong> с системами <span style="color:#00d2ff;">Anti-Phishing</span> и <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Прежде чем вы введете свои данные, приложение активируется и блокирует вход, если обнаруживает опасность. <strong>Играйте онлайн с друзьями, совершенно бесплатно</strong>, и забудьте о хакерах.`,
                 stats_label: "Загрузок в Google Play",
-                section_other: "📱 Другие приложения MaxStudio",
-                other_desc: "Веселые и полезные инструменты для повседневной жизни.",
+                section_other: "📱 Другие приложения и инструменты MaxStudio",
+                other_desc: "Веселые, полезные и профессиональные инструменты для повседневной жизни.",
                 hotwheels_desc: "Сканируйте свои машины Hot Wheels и узнавайте информацию, редкости и многое другое.",
                 pokemon_desc: "Сканируйте свои карты Pokémon и получайте информацию, ценности и данные по каждой карте.",
                 generador_desc: "Храните свои пароли в безопасности в защищенном хранилище.",
@@ -794,8 +669,8 @@
                 vpnfree_desc: "Surfen Sie anonym und sicher im Web.",
                 wallet_desc: `Die <strong>einzige Wallet</strong> mit <span style="color:#00d2ff;">Anti-Phishing</span>- und <span style="color:#ff6b6b;">Anti-2FA-Angriffs</span>-Systemen. Bevor Sie Ihre Daten eingeben, wird die App aktiv und blockiert den Zugang, wenn sie Gefahr erkennt. <strong>Spielen Sie online mit Ihren Freunden, völlig kostenlos</strong>, und vergessen Sie Hacker.`,
                 stats_label: "Downloads bei Google Play",
-                section_other: "📱 Andere MaxStudio-Apps",
-                other_desc: "Unterhaltsame und nützliche Tools für den Alltag.",
+                section_other: "📱 Andere MaxStudio-Apps & Tools",
+                other_desc: "Unterhaltsame, nützliche und professionelle Tools für den Alltag.",
                 hotwheels_desc: "Scannen Sie Ihre Hot Wheels-Autos und entdecken Sie Informationen, Raritäten und vieles mehr.",
                 pokemon_desc: "Scannen Sie Ihre Pokémon-Karten und erhalten Sie Informationen, Werte und Daten zu jeder Karte.",
                 generador_desc: "Bewahren Sie Ihre Passwörter sicher in einem geschützten Tresor auf.",
@@ -829,8 +704,8 @@
                 vpnfree_desc: "Navegue na web de forma anônima e segura.",
                 wallet_desc: `A <strong>única wallet</strong> com sistemas <span style="color:#00d2ff;">Anti-Phishing</span> e <span style="color:#ff6b6b;">Anti-2FA Attack</span>. Antes de você inserir seus dados, o app é ativado e bloqueia a entrada se detectar perigo. <strong>Jogue online com seus amigos, totalmente grátis</strong>, e esqueça os hackers.`,
                 stats_label: "Downloads no Google Play",
-                section_other: "📱 Outros Apps da MaxStudio",
-                other_desc: "Ferramentas divertidas e úteis para o dia a dia.",
+                section_other: "📱 Outros Apps e Ferramentas da MaxStudio",
+                other_desc: "Ferramentas divertidas, úteis e profissionais para o dia a dia.",
                 hotwheels_desc: "Escaneie seus carros Hot Wheels e descubra informações, raridades e muito mais.",
                 pokemon_desc: "Escaneie suas cartas Pokémon e obtenha informações, valores e dados de cada carta.",
                 generador_desc: "Armazene suas senhas com segurança em um cofre protegido.",
